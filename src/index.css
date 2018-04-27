@@ -1,5 +1,12 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-size: 16px; 
+  font-family: Lato,'Helvetica Neue', Arial, Helvetica,'PingFang TC', 'Heiti TC', '微軟正黑體', sans-serif;
+}
+
+body {
+  background: hsla(0,0%,0%,0.05);
+  height: 100%;
+  min-height: vh;
 }
