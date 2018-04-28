@@ -2,7 +2,18 @@
   text-align: center;
 }
 
-.App-header {
+.App-header,
+.App-footer {
+  background: #fff;
+}
+
+.App-menu.ui.text.menu {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 767px) {
+.App-menu.ui.text.menu {
+}
 }
 
 .App-logo {
@@ -10,10 +21,56 @@
   height: 80px;
 }
 
-.App-welcome {
-}
-
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.App-welcome {
+}
+
+.map .north {
+  fill: hsla(180, 50%, 50%, 1);
+}
+
+.map .middle {
+  fill: hsla(90, 50%, 50%, 1);
+}
+
+.map .south {
+  fill: hsla(60, 50%, 50%, 1);
+}
+
+.map .east {
+  fill: hsla(350, 50%, 70%, 1);
+}
+
+.map .north,
+.map .middle,
+.map .south,
+.map .east {
+  stroke-width: 1px;
+  stroke: hsla(0, 0%, 100%, 1);
+}
+
+.map .north:hover,
+.map .middle:hover,
+.map .south:hover,
+.map .east:hover {
+  fill: hsla(50, 100%, 50%, 1);
+  stroke: hsla(50, 100%, 50%, 1);
+  cursor: pointer;
+}
+
+.map .city,
+.map .county {
+}
+.map .municipality {
+  /*
+  fill: hsla(330, 50%, 50%, 1);
+  */
+}
+
+a[data-action] {
+  cursor: pointer;
 }

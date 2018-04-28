@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import './App.css';
+import TaiwanMap from './component/Map.js'
+import Footer from './component/Footer.js'
+import './App.css'
 
 class App extends Component {
   render() {
@@ -8,7 +10,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <div className='ui container'>
-            <nav className='ui secondary menu'>
+            <nav className='App-menu ui text menu' >
               <div className='item'>
                 <img src='./logo.png' alt='logo' />
               </div>
@@ -50,11 +52,14 @@ class App extends Component {
             </div>
             <hr className='ui hidden divider' />
             <p>
-              我已經決定好了！
+              我已經決定好了↓
             </p>
-            <hr className='ui hidden section divider' />
           </div>
         </section>
+        <hr className='ui hidden divider' />
+        {TaiwanMap}
+        <hr className='ui hidden section divider' />
+        {Footer}
       </div>
     );
   }
