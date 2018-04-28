@@ -16,6 +16,20 @@
 }
 }
 
+.ui.menu .logo.image.item img {
+  width: auto;
+  margin-right: 0.5em;
+}
+
+.ui.menu .icon.logo.image.item img {
+  height: 1.5rem;
+}
+
+.ui.menu .banner.logo.image.item img {
+  height: 5rem;
+  margin-left: -0.7em;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -69,6 +83,10 @@
   /*
   fill: hsla(330, 50%, 50%, 1);
   */
+}
+
+a {
+  color: inherit;
 }
 
 a[data-action] {

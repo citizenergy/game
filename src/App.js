@@ -2,26 +2,14 @@ import React, { Component } from 'react'
 
 import TaiwanMap from './component/Map.js'
 import Footer from './component/Footer.js'
+import Header from './component/Header.js'
 import './App.css'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <div className='ui container'>
-            <nav className='App-menu ui text menu' >
-              <div className='item'>
-                <img src='./logo.png' alt='logo' />
-              </div>
-              <div className='right menu'>
-                <div className='item'>
-                  <i className='icon sidebar' />
-                </div>
-              </div>
-            </nav>
-          </div>
-        </header>
+        {Header}
         <section className='App-welcome'>
           <div className='ui container'>
             <hr className='ui hidden fitted divider' />

@@ -8,6 +8,7 @@ html, body {
 body {
   background: hsla(0,0%,0%,0.05);
   background: hsla(171, 54%, 95%, 1);
+  background: hsla(180, 50%, 90%, 1);
   height: 100%;
   min-height: vh;
 }
