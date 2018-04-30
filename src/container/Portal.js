@@ -30,8 +30,8 @@ class Portal extends Component {
   render() {
 
     const options = geo[this.state.area] ? geo[this.state.area].region.map((item, index) => (
-      <p key={index} >
-        <a className='ui button' href={`/${item.id}`} style={{background: geo[this.state.area].color, color: '#fff'}} >
+      <p key={index} style={{margin: '1rem auto', width: 'fit-content'}} >
+        <a className='ui button' href={`/${item.id}`} style={{background: geo[this.state.area].color, color: '#fff', margin: '0'}} >
           {item.name}
         </a>
       </p>
