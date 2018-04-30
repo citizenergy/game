@@ -58,10 +58,10 @@ class App extends Component {
     )
 
     return (
-      <Router>
+      <Router basename={`/${path.base}`} >
       <div className="App">
         {Header}
-        <Route exact path='/' component={Home}/>
+        <Route exact path={`/`} component={Home}/>
         <Route exact path={`/${path.portal}`} component={Portal}/>
         <Route exact path={`/${path.report}`} component={Portal}/>
         {Footer}
