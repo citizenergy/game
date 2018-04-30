@@ -12,3 +12,14 @@ body {
   height: 100%;
   min-height: vh;
 }
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:hover,
+a:active {
+  color: #00b5ad;
+}
+

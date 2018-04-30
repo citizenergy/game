@@ -10,9 +10,8 @@ export default (
         {org.name}
       </a>
       <div className='right menu'>
-        <a className='item' href='https://github.com/citizenergy/game' target='_blank'>
+        <a className='icon item' href='https://github.com/citizenergy/game' target='_blank' rel="noopener noreferrer">
           <i className='icon code' />
-          Source code
         </a>
       </div>
     </div>

@@ -1,10 +1,24 @@
+#root, .App {
+  height: 100%;
+  min-height: vh;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-header,
 .App-footer {
   background: #fff;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.App-main {
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .App-menu.ui.text.menu {
@@ -40,9 +54,6 @@
   to { transform: rotate(360deg); }
 }
 
-.App-welcome {
-}
-
 .map .north {
   fill: hsla(180, 50%, 50%, 1);
 }
@@ -65,15 +76,19 @@
 .map .east {
   stroke-width: 1px;
   stroke: hsla(0, 0%, 100%, 1);
+  cursor: pointer;
 }
 
 .map .north:hover,
 .map .middle:hover,
 .map .south:hover,
-.map .east:hover {
+.map .east:hover,
+.map .north:active,
+.map .middle:active,
+.map .south:active,
+.map .east:active {
   fill: hsla(50, 100%, 50%, 1);
   stroke: hsla(50, 100%, 50%, 1);
-  cursor: pointer;
 }
 
 .map .city,
@@ -85,10 +100,9 @@
   */
 }
 
-a {
-  color: inherit;
+.Portal-dimmer {
+  padding: 1rem 0;
 }
 
-a[data-action] {
-  cursor: pointer;
+.Portal-dimmer .content {
 }
