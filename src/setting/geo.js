@@ -1,7 +1,6 @@
 export default {
   north: {
     name: '北台灣',
-    color: 'hsla(180, 50%, 40%, 1)',
     region: [
       {
         id: 'keelung_city',
@@ -37,7 +36,6 @@ export default {
   },
   middle: {
     name: '中台灣',
-    color: 'hsla(90, 50%, 40%, 1)',
     region: [
       {
         id: 'miaoli_county',
@@ -68,7 +66,6 @@ export default {
   },
   south: {
     name: '南台灣',
-    color: 'hsla(60, 50%, 40%, 1)',
     region: [
       {
         id: 'chiayi_county',
@@ -104,7 +101,6 @@ export default {
   },
   east: {
     name: '東台灣與離島',
-    color: 'hsla(350, 50%, 60%, 1)',
     region: [
       {
         id: 'yilan_county',

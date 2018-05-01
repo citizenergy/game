@@ -83,6 +83,10 @@
 .map .middle:hover,
 .map .south:hover,
 .map .east:hover,
+.map .north:focus,
+.map .middle:focus,
+.map .south:focus,
+.map .east:focus,
 .map .north:active,
 .map .middle:active,
 .map .south:active,
@@ -104,5 +108,32 @@
   padding: 1rem 0;
 }
 
-.Portal-dimmer .content {
+.Portal-dimmer .button {
+  color: #fff;
+  margin: 0;
 }
+
+.Portal-dimmer .north:hover,
+.Portal-dimmer .north:focus,
+.Portal-dimmer .north:active {
+  background-color: hsla(180, 50%, 40%, 1)!important;
+}
+
+.Portal-dimmer .middle:hover,
+.Portal-dimmer .middle:focus,
+.Portal-dimmer .middle:active {
+  background-color: hsla(90, 50%, 40%, 1)!important;
+}
+
+.Portal-dimmer .south:hover,
+.Portal-dimmer .south:focus,
+.Portal-dimmer .south:active {
+  background-color: hsla(60, 50%, 40%, 1)!important;
+}
+
+.Portal-dimmer .east:hover,
+.Portal-dimmer .east:focus,
+.Portal-dimmer .east:active {
+  background-color: hsla(350, 50%, 60%, 1)!important;
+}
+

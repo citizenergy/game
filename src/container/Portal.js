@@ -23,7 +23,6 @@ class Portal extends Component {
   }
 
   closeDimmer() {
-    console.log('close')
     this.setState({dimmer: false})
   }
 
@@ -31,7 +30,7 @@ class Portal extends Component {
 
     const options = geo[this.state.area] ? geo[this.state.area].region.map((item, index) => (
       <p key={index} style={{margin: '1rem auto', width: 'fit-content'}} >
-        <a className='ui button' href={`/${item.id}`} style={{background: geo[this.state.area].color, color: '#fff', margin: '0'}} >
+        <a className={`ui ${this.state.area} black button`} href={`/${item.id}`} >
           {item.name}
         </a>
       </p>
@@ -49,7 +48,6 @@ class Portal extends Component {
           <span onClick={() => this.closeDimmer()} className='ui basic inverted icon button' style={{position: 'absolute', right: '1rem', top: '1rem', margin: '0'}} >
             <i className='icon remove' />
           </span>
-          <hr className='ui hidden divider' />
           <h2 className='ui inverted header'>
             {geo[this.state.area] ? geo[this.state.area].name : ''}
           </h2>
