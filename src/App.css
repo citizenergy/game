@@ -110,7 +110,6 @@
 
 .Portal-dimmer .button {
   color: #fff;
-  margin: 0;
 }
 
 .Portal-dimmer .north:hover,
@@ -137,3 +136,6 @@
   background-color: hsla(350, 50%, 60%, 1)!important;
 }
 
+.ui.button {
+  margin: 0;
+}
