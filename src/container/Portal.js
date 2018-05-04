@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Dimmer } from 'semantic-ui-react'
 
-import geo from '../setting/geo.js'
+import region from '../setting/region.js'
+import county from '../setting/county.js'
+
 import TaiwanMap from '../component/Map.js'
 
 class Portal extends Component {
@@ -11,15 +13,15 @@ class Portal extends Component {
     super(props)
 
     this.state = {
-      area: '',
+      currentRegion: '',
       dimmer: false
     }
 
-    this.setArea = this.setArea.bind(this)
+    this.setRegion = this.setRegion.bind(this)
   }
 
-  setArea(area) {
-    this.setState({area: area, dimmer: true})
+  setRegion(currentRegion) {
+    this.setState({currentRegion: currentRegion, dimmer: true})
   }
 
   closeDimmer() {
@@ -27,11 +29,12 @@ class Portal extends Component {
   }
 
   render() {
+    const currentRegion = region[this.state.currentRegion]
 
-    const options = geo[this.state.area] ? geo[this.state.area].region.map((item, index) => (
+    const options = currentRegion ? currentRegion.county.map((id, index) => (
       <p key={index} style={{margin: '1rem auto', width: 'fit-content'}} >
-        <a className={`ui ${this.state.area} black button`} href={`/${item.id}`} >
-          {item.name}
+        <a className={`ui ${this.state.currentRegion} black button`} href={`/${id}`} >
+          {county[id].name}
         </a>
       </p>
     )) : null
@@ -42,14 +45,14 @@ class Portal extends Component {
         <h2 className='ui header'>
           我想住在...
         </h2>
-        <TaiwanMap onClick={this.setArea} />
+        <TaiwanMap onClick={this.setRegion} />
         <hr className='ui hidden section divider' />
         <Dimmer active={this.state.dimmer} onClickOutside={() => this.closeDimmer()} className='Portal-dimmer' >
           <span onClick={() => this.closeDimmer()} className='ui basic inverted icon button' style={{position: 'absolute', right: '1rem', top: '1rem', margin: '0'}} >
             <i className='icon remove' />
           </span>
           <h2 className='ui inverted header'>
-            {geo[this.state.area] ? geo[this.state.area].name : ''}
+            {currentRegion ? currentRegion.name : ''}
           </h2>
           {options}
         </Dimmer>

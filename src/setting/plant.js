@@ -1,4 +1,4 @@
-[
+const temp1 = [
   'pumped',
   'ror',
   'offshore',
@@ -11,7 +11,7 @@
   'co_gen',
   'fission',
 ]
-[
+const temp2 = [
   'keelung_city',
   'new_taipei_city',
   'taipei_city',
