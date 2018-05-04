@@ -89,12 +89,6 @@ class App extends Component {
   setAnswer(quizId, answerValue) {
     this.setState((prevState, props) => {
 
-      if ( prevState.result.size < 2 || prevState.current + 1 === quiz.length ) {
-        return {
-          view: 'finished'
-        }
-      }
-
       prevState.answer[quizId] = answerValue
 
       let newResult = new Set();
@@ -112,6 +106,10 @@ class App extends Component {
         answer: prevState.answer,
         result: newResult,
         current: prevState.current + 1
+      }
+    }, () => {
+      if ( this.state.result.size < 2 || this.state.current === quiz.length ) {
+        this.setState({view: 'finished'})
       }
     })
   }
