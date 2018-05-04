@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TaiwanMap = ({onClick}) =>  (
+export default ({onClick}) =>  (
 <svg className='map' version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="255.121px" height="430.531px" viewBox="0 0 255.121 430.531">
   This svg is derivated from Eason Hsieh's work at https://codepen.io/hahamimidido/pen/wGRrza
 
@@ -753,5 +753,3 @@ const TaiwanMap = ({onClick}) =>  (
   </g>
 </svg>
 )
-
-export default TaiwanMap

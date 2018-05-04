@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 
 import app from '../setting/app'
 
-export default (
+export default ({onReset}) => (
 <header className="App-header">
   <div className='ui container'>
     <nav className='App-menu ui text menu' >
-      <Link to='/' className='icon logo image item'>
+      <Link to='/' className='icon logo image item' onClick={() => onReset()} >
         <img src='./logo.png' alt='logo' />
         {app.name}
       </Link>

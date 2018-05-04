@@ -19,7 +19,7 @@ import Footer from './component/Footer.js'
 
 import './App.css'
 
-// organize data
+// prepare for data parsing
 
 const countyList = Object.keys(county)
 
@@ -33,7 +33,7 @@ const aspect = [
 
 let candidate = {}
 
-// parse plant
+// parse plant data
 
 let candidateData = {}
 plant.forEach((plantItem, plantIndex) => {
@@ -45,7 +45,7 @@ plant.forEach((plantItem, plantIndex) => {
 })
 candidate.plant = candidateData
 
-// parse others
+// parse other data
 
 countyList.forEach((countyItem, countyIndex) => {
   aspect.forEach((aspectItem, aspectIndex) => {
@@ -60,6 +60,8 @@ countyList.forEach((countyItem, countyIndex) => {
     })
   })
 })
+
+// check result
 
 console.log(candidate)
 
@@ -78,6 +80,7 @@ class App extends Component {
 
     this.start = this.start.bind(this)
     this.setAnswer = this.setAnswer.bind(this)
+    this.resetGame = this.resetGame.bind(this)
   }
 
   start() {
@@ -111,6 +114,15 @@ class App extends Component {
       if ( this.state.result.size < 2 || this.state.current === quiz.length ) {
         this.setState({view: 'finished'})
       }
+    })
+  }
+
+  resetGame() {
+    this.setState({
+      view: 'home',
+      current: 0,
+      answer: {},
+      result: new Set(countyList)
     })
   }
 
@@ -213,7 +225,7 @@ class App extends Component {
     return (
       <Router basename={`/${path.base}`} >
       <div className="App">
-        {Header}
+        <Header onReset={this.resetGame} />
         <Route exact path={`/`} component={() => QuizJSX}/>
         <Route exact path={`/${path.portal}`} component={Portal}/>
         <Route exact path={`/${path.report}`} component={() => Report}/>
