@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 
 import path from './setting/path'
@@ -14,6 +13,7 @@ import category from './setting/category'
 
 import Header from './component/Header.js'
 import Home from './component/Home.js'
+import Finished from './component/Finished.js'
 import Portal from './container/Portal.js'
 import Footer from './component/Footer.js'
 
@@ -84,6 +84,7 @@ class App extends Component {
   }
 
   start() {
+    console.log(this.state.result)
     this.setState({
       view: 'quiz'
     })
@@ -104,7 +105,7 @@ class App extends Component {
           newResult.add(elem);
         }
       }
-
+      console.log(newResult)
       return {
         answer: prevState.answer,
         result: newResult,
@@ -141,6 +142,7 @@ class App extends Component {
           <h2 className='ui header'>
             你適合住在...
           </h2>
+          <hr className='ui hidden divider' />
           {list}
           <hr className='ui hidden divider' />
         </div>
@@ -155,19 +157,7 @@ class App extends Component {
     }
 
     if (this.state.view === 'finished') {
-      return (
-      <section className='App-main' >
-        <div className='ui container'>
-          <hr className='ui hidden divider' />
-          <p>
-            <Link to='/report' className='ui large teal button' >
-              report
-            </Link>
-          </p>
-          <hr className='ui hidden divider' />
-        </div>
-      </section>
-      )
+      return Finished
     }
 
     if (this.state.view !== 'quiz') {
@@ -179,7 +169,7 @@ class App extends Component {
       return null
     }
 
-    const OptionJSX = quizItem.option.map((option, order) => {
+    let Option = quizItem.option.map((option, order) => {
       let showOption = false
       for (const resultItem of this.state.result) {
         if (!candidate[quizItem.id]) {
@@ -202,6 +192,12 @@ class App extends Component {
       )
     })
 
+    Option = Option.filter(item => item !== null)
+
+    if (Option.length === 0) {
+      return Finished
+    }
+
     return (
       <section className='App-main' >
         <div className='ui container'>
@@ -209,7 +205,11 @@ class App extends Component {
           <h2 className='ui header'>
             {quizItem.title}
           </h2>
-          {OptionJSX}
+          <p>
+            {quizItem.description}
+          </p>
+          <hr className='ui hidden divider' />
+          {Option}
           <hr className='ui hidden divider' />
         </div>
       </section>
@@ -218,7 +218,7 @@ class App extends Component {
 
   render() {
 
-    const QuizJSX = this.renderQuiz()
+    const Quiz = this.renderQuiz()
 
     const Report = this.renderReport()
 
@@ -226,7 +226,7 @@ class App extends Component {
       <Router basename={`/${path.base}`} >
       <div className="App">
         <Header onReset={this.resetGame} />
-        <Route exact path={`/`} component={() => QuizJSX}/>
+        <Route exact path={`/`} component={() => Quiz}/>
         <Route exact path={`/${path.portal}`} component={Portal}/>
         <Route exact path={`/${path.report}`} component={() => Report}/>
         {Footer}

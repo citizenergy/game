@@ -54,6 +54,10 @@ class Portal extends Component {
           <h2 className='ui inverted header'>
             {currentRegion ? currentRegion.name : ''}
           </h2>
+          <p>
+            {currentRegion ? currentRegion.description : ''}
+          </p>
+          <hr className='ui hidden divider' />
           {options}
         </Dimmer>
       </Dimmer.Dimmable>

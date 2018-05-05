@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import path from '../setting/path'
+import Placeholder from './Placeholder'
 
 export default ({onStart}) => (
 <main className='App-main'>
@@ -10,9 +11,7 @@ export default ({onStart}) => (
     <h1 className="ui header">
       某某星球爆炸了 ∫OoO∫
     </h1>
-    <div className='ui large image'>
-      <img src='./placeholder.png' alt='placeholder' />
-    </div>
+    {Placeholder}
     <h2 className="ui header">
       你搭乘太空船逃到地球...
     </h2>
