@@ -21,6 +21,10 @@
   flex-shrink: 1;
 }
 
+.App-main[data-mode='quiz'] {
+  background: hsla(60, 50%, 90%, 1);
+}
+
 .App-menu.ui.text.menu {
   margin-top: 0;
   margin-bottom: 0;

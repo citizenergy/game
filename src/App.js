@@ -16,6 +16,7 @@ import Home from './component/Home.js'
 import Finished from './component/Finished.js'
 import Portal from './container/Portal.js'
 import Footer from './component/Footer.js'
+import Placeholder from './component/Placeholder'
 
 import './App.css'
 
@@ -95,6 +96,13 @@ class App extends Component {
 
       prevState.answer[quizId] = answerValue
 
+      if (answerValue === 'none') {
+        return {
+          answer: prevState.answer,
+          current: prevState.current + 1
+        }
+      }
+
       let newResult = new Set();
       for (const elem of prevState.result) {
         if (!candidate[quizId]) {
@@ -171,13 +179,17 @@ class App extends Component {
 
     let Option = quizItem.option.map((option, order) => {
       let showOption = false
-      for (const resultItem of this.state.result) {
-        if (!candidate[quizItem.id]) {
-          console.log(`no ${quizItem.id} in ${candidate} `)
-        } else if (!candidate[quizItem.id][option.value]) {
-          console.log(`no ${option.value} in ${candidate[quizItem.id]} `)
-        } else if (candidate[quizItem.id][option.value].has(resultItem)) {
-          showOption = true
+      if (option.value === 'none') {
+        showOption = true
+      } else {
+        for (const resultItem of this.state.result) {
+          if (!candidate[quizItem.id]) {
+            console.log(`no ${quizItem.id} in ${candidate} `)
+          } else if (!candidate[quizItem.id][option.value]) {
+            console.log(`no ${option.value} in ${candidate[quizItem.id]} `)
+          } else if (candidate[quizItem.id][option.value].has(resultItem)) {
+            showOption = true
+          }
         }
       }
       if (!showOption) {
@@ -199,11 +211,15 @@ class App extends Component {
     }
 
     return (
-      <section className='App-main' >
+      <section className='App-main' data-mode={this.state.view} >
         <div className='ui container'>
           <hr className='ui hidden divider' />
-          <h2 className='ui header'>
+          <h1 className='ui header'>
             {quizItem.title}
+          </h1>
+          {Placeholder}
+          <h2 className='ui header'>
+            {quizItem.subtitle}
           </h2>
           <p>
             {quizItem.description}
