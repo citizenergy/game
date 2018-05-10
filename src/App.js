@@ -74,6 +74,7 @@ class App extends Component {
 
     this.state = {
       view: 'home',
+      quiz_mode: 'normal',
       current: 0,
       answer: {},
       result: new Set(countyList)
@@ -81,6 +82,7 @@ class App extends Component {
 
     this.start = this.start.bind(this)
     this.setAnswer = this.setAnswer.bind(this)
+    this.goNext = this.goNext.bind(this)
     this.resetGame = this.resetGame.bind(this)
   }
 
@@ -89,6 +91,13 @@ class App extends Component {
     this.setState({
       view: 'quiz'
     })
+  }
+
+  goNext() {
+    this.setState((prevState, props) => ({
+      quiz_mode: 'normal',
+      current: prevState.current + 1
+    }))
   }
 
   setAnswer(quizId, answerValue) {
@@ -100,6 +109,13 @@ class App extends Component {
         return {
           answer: prevState.answer,
           current: prevState.current + 1
+        }
+      }
+
+      if (quiz[this.state.current].type === 'tutorial') {
+        return {
+          answer: prevState.answer,
+          quiz_mode: 'tutorial'
         }
       }
 
@@ -129,6 +145,7 @@ class App extends Component {
   resetGame() {
     this.setState({
       view: 'home',
+      quiz_mode: 'normal',
       current: 0,
       answer: {},
       result: new Set(countyList)
@@ -177,24 +194,56 @@ class App extends Component {
       return null
     }
 
-    let Option = quizItem.option.map((option, order) => {
-      let showOption = false
-      if (option.value === 'none') {
-        showOption = true
-      } else {
-        for (const resultItem of this.state.result) {
-          if (!candidate[quizItem.id]) {
-            console.log(`no ${quizItem.id} in ${candidate} `)
-          } else if (!candidate[quizItem.id][option.value]) {
-            console.log(`no ${option.value} in ${candidate[quizItem.id]} `)
-          } else if (candidate[quizItem.id][option.value].has(resultItem)) {
-            showOption = true
+    if (this.state.quiz_mode === 'tutorial') {
+      return (
+        <section className='App-main' data-mode={this.state.view} >
+          <div className='ui container'>
+            <hr className='ui hidden divider' />
+            <h1 className='ui header'>
+              空包題大標
+            </h1>
+            <h2 className='ui header'>
+              空包題小標
+            </h2>
+            <p>
+              空包題詳解
+            </p>
+            <hr className='ui hidden divider' />
+            <p>
+              <a onClick={() => this.goNext()} className='ui basic black button'>
+                繼續
+              </a>
+            </p>
+            <hr className='ui hidden divider' />
+          </div>
+        </section>
+      )
+    }
+
+    let Option
+
+    Option = quizItem.option.map((option, order) => {
+
+      if (quizItem.type === 'quiz') {
+        let showOption = false
+        if (option.value === 'none') {
+          showOption = true
+        } else {
+          for (const resultItem of this.state.result) {
+            if (!candidate[quizItem.id]) {
+              console.log(`no ${quizItem.id} in ${candidate} `)
+            } else if (!candidate[quizItem.id][option.value]) {
+              console.log(`no ${option.value} in ${candidate[quizItem.id]} `)
+            } else if (candidate[quizItem.id][option.value].has(resultItem)) {
+              showOption = true
+            }
           }
         }
+        if (!showOption) {
+          return null
+        }
       }
-      if (!showOption) {
-        return null
-      }
+
       return (
         <p key={order} >
           <a onClick={() => this.setAnswer(quizItem.id, option.value)} className='ui basic black button'>

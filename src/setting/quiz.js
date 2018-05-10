@@ -46,9 +46,51 @@ export default [
     ],
   },
   {
+    id: 'number_one',
+    type: 'tutorial',
+    title: '剛才出來勘查電廠，遇到一群熱情的鄉民 :o',
+    subtitle: '圍著我拍手，說恭喜來到亞洲第一島 o_O',
+    description: '聽不懂在供蝦密啊！看他們一臉萌樣，所謂的亞洲第一大概是這種第一吧？',
+    option: [
+      {
+        display: '電費亞洲第一貴',
+        value: 'charge',
+      },
+      {
+        display: '每個人的用電量亞洲第一高',
+        value: 'usage',
+      },
+      {
+        display: '二氧化碳排放量亞洲第一名',
+        value: 'co2',
+      },
+    ],
+  },
+  {
+    id: 'main_consumer',
+    type: 'tutorial',
+    title: '額，原來台灣人這麼會用電，還真看不粗乃 :Q',
+    subtitle: '我猜一定是這樣用的吧',
+    description: '',
+    option: [
+      {
+        display: '工業用電最兇',
+        value: 'industrial',
+      },
+      {
+        display: '住宅用電最兇',
+        value: 'residential',
+      },
+      {
+        display: '商業用電最兇',
+        value: 'commercial',
+      },
+    ],
+  },
+  {
     id: 'saving',
     type: 'quiz',
-    title: '島民跑來跟我說台灣的電已經快不夠用了 @@',
+    title: '然後鄉民跟我說，台灣的電已經快不夠用了 @@',
     subtitle: '我得配合他們省電，才能住下來 orz',
     description: '該用什麼方法省電呢...',
     option: [
@@ -79,11 +121,32 @@ export default [
     ],
   },
   {
+    id: 'rush_hour',
+    type: 'tutorial',
+    title: '是說，省電沒省在刀口上的話也是白搭吧？',
+    subtitle: '聰明的我一定要專門挑尖峰時段來省電的啦！',
+    description: '依我看，台灣的用電尖峰時段一定是...',
+    option: [
+      {
+        display: '冬天半夜 11 點到 1 點',
+        value: 'night',
+      },
+      {
+        display: '夏天下午 1 點到 3 點',
+        value: 'noon',
+      },
+      {
+        display: '夏天晚上 9 點到 11 點',
+        value: 'evening',
+      },
+    ],
+  },
+  {
     id: 'green',
     type: 'quiz',
-    title: '有人說幫他們發展循環利用的能源也行！',
-    subtitle: '我可以做的是...',
-    description: '',
+    title: '鄉民說如果很不會省電的話...',
+    subtitle: '幫他們發展循環利用的能源也行。',
+    description: '我可以做的是：',
     option: [
       {
         display: '那我來挑個綠能、儲能、節能全部都有的智慧社區來住好囉',
