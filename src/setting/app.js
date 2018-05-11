@@ -1,3 +1,3 @@
 export default {
-  name: '你適合住哪？'
+  name: '尋找理想中的能源家園'
 }

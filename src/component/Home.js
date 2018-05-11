@@ -2,25 +2,30 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import path from '../setting/path'
+import app from '../setting/app'
 import Placeholder from './Placeholder'
 
 export default ({onStart}) => (
-<main className='App-main'>
+<main className='App-main welcome'>
   <div className='ui container'>
     <hr className='ui hidden divider' />
     <h1 className="ui header">
-      某某星球爆炸了 ∫OoO∫
+      {app.name}
     </h1>
-    {Placeholder}
-    <h2 className="ui header">
-      你搭乘太空船逃到地球...
+    <hr className='ui hidden divider' />
+    <p className='description' >
+      經歷長達四十年的能源戰爭，ＯＯ星球爆炸了！
+    </p>
+    <p className='description' >
+      危急中，你搭乘太空船從ＯＯ星球逃出來，聽說能源災難是全宇宙的共同問題，你懷著最後的希望，
+    </p>
+    <p className='description' >
+      降落在地球的一個神秘的島嶼——台灣，你將要在島上尋找理想中的能源家園……
+    </p>
+    <hr className='ui hidden divider' />
+    <h2 className='ui header' >
+      「這個島嶼說大也不大，但有山有海，我定居在哪裡好呢？」
     </h2>
-    <p>
-      用太空技術技術做為交換，說服了台灣國民讓你在這裡生活。
-    </p>
-    <p>
-      台灣很大，你想定居在哪個縣市呢？
-    </p>
     <hr className='ui hidden divider' />
     <p>
       <a onClick={() => onStart() } className='ui huge teal button'>

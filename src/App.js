@@ -259,20 +259,18 @@ class App extends Component {
       return Finished
     }
 
+    const Background = quizItem.background.map((p, pIndex) => <p className='description' key={`${p}-${pIndex}`} >{p}</p>)
+
     return (
       <section className='App-main' data-mode={this.state.view} >
         <div className='ui container'>
           <hr className='ui hidden divider' />
-          <h1 className='ui header'>
-            {quizItem.title}
-          </h1>
+          {Background}
+          <hr className='ui hidden divider' />
           {Placeholder}
           <h2 className='ui header'>
-            {quizItem.subtitle}
+            {quizItem.question}
           </h2>
-          <p>
-            {quizItem.description}
-          </p>
           <hr className='ui hidden divider' />
           {Option}
           <hr className='ui hidden divider' />

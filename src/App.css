@@ -21,6 +21,11 @@
   flex-shrink: 1;
 }
 
+.App-main.welcome {
+  background-image: url('/placeholder.png');
+  background-size: cover;
+}
+
 .App-main[data-mode='quiz'] {
   background: hsla(60, 50%, 90%, 1);
 }

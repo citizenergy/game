@@ -1,4 +1,8 @@
 export default {
+  no_plant: {
+    name: '無電廠',
+    name_en: 'No Plant',
+  },
   hydro: {
     name: '水力',
     name_en: 'Hydro',

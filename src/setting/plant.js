@@ -37,6 +37,16 @@ const temp2 = [
 ]
 export default [
   {
+    name: '沒有電廠',
+    energy: 'no_plant',
+    county: 'taipei_city',
+  },
+  {
+    name: '沒有電廠',
+    energy: 'no_plant',
+    county: 'chiayi_city',
+  },
+  {
     name: '第一核能發電廠',
     energy: 'fission',
     county: 'new_taipei_city',

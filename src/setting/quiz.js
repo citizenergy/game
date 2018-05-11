@@ -2,8 +2,11 @@ export default [
   {
     id: 'industry',
     type: 'quiz',
-    title: '身為重視生活步調的外星人...',
-    subtitle: '我喜歡住在：',
+    background: [
+      '這個神秘的島嶼上有19個縣市，處處有獨特的風光和生活步調',
+      '你希望住在怎麼樣的地方？',
+    ],
+    question: '「我喜歡住在……」',
     description: '',
     option: [
       {
@@ -19,9 +22,12 @@ export default [
   {
     id: 'plant',
     type: 'quiz',
-    title: '我想過人類的文明生活（握拳）',
-    subtitle: '... 結果發現不能沒有電 XD',
-    description: '住在哪種電廠旁邊好勒？',
+    background: [
+      '人們的日常總離不開電力，為維持全島的舒適生活，島上蓋了各式各樣的發電廠。',
+      '你必須選擇跟某個發電廠住在一起。',
+    ],
+    question: '「唔……住在哪種電廠旁邊呢？」',
+    description: '',
     option: [
       {
         display: '太陽光',
@@ -43,25 +49,32 @@ export default [
         display: '核能',
         value: 'nuclear',
       },
+      {
+        display: '我就是不要跟電廠住在一起！',
+        value: 'no_plant',
+      },
     ],
   },
   {
     id: 'number_one',
     type: 'tutorial',
-    title: '剛才出來勘查電廠，遇到一群熱情的鄉民 :o',
-    subtitle: '圍著我拍手，說恭喜來到亞洲第一島 o_O',
-    description: '聽不懂在供蝦密啊！看他們一臉萌樣，所謂的亞洲第一大概是這種第一吧？',
+    background: [
+      '終於在島上安頓下來！你聽到「叮咚」的門鈴聲，一打開門，',
+      '一群熱情的鄰居大喊：「恭喜來到亞洲第一島！」',
+    ],
+    question: '聽不懂在供蝦密啊！看他們一臉萌樣，所謂的亞洲第一大概是這種第一吧？',
+    description: '',
     option: [
       {
-        display: '電費亞洲第一貴',
+        display: '電費，亞洲第一貴',
         value: 'charge',
       },
       {
-        display: '每個人的用電量亞洲第一高',
+        display: '每人的年平均用電量，亞洲第一高',
         value: 'usage',
       },
       {
-        display: '二氧化碳排放量亞洲第一名',
+        display: '二氧化碳排放量，亞洲第一名',
         value: 'co2',
       },
     ],
@@ -69,20 +82,23 @@ export default [
   {
     id: 'main_consumer',
     type: 'tutorial',
-    title: '額，原來台灣人這麼會用電，還真看不粗乃 :Q',
-    subtitle: '我猜一定是這樣用的吧',
+    background: [
+      '名列亞洲第一的台灣，每年的用電量仍然不斷上升，有進無退！',
+      '到底電力都花到哪去了呢？',
+    ],
+    question: '「我想，一直以來都是…」',
     description: '',
     option: [
       {
-        display: '工業用電最兇',
+        display: '工業用電最兇！',
         value: 'industrial',
       },
       {
-        display: '住宅用電最兇',
+        display: '住宅用電最兇！',
         value: 'residential',
       },
       {
-        display: '商業用電最兇',
+        display: '商業用電最兇！',
         value: 'commercial',
       },
     ],
@@ -90,20 +106,23 @@ export default [
   {
     id: 'saving',
     type: 'quiz',
-    title: '然後鄉民跟我說，台灣的電已經快不夠用了 @@',
-    subtitle: '我得配合他們省電，才能住下來 orz',
-    description: '該用什麼方法省電呢...',
+    background: [
+      '聽說，為了應付連年攀升的用電量，節電是這個島嶼上的一大挑戰。',
+      '經歷過四十年能源戰爭，你深知節電有千百種方法…',
+    ],
+    question: '「台灣要節電嘛，我建議……」',
+    description: '',
     option: [
       {
-        display: '應該先請那些用電特別兇的人省電呀！我省一個月也比不上人家省一天',
+        display: '請用電特別兇的人省電！我省一個月也比不上他們省一天',
         value: 'big_customer',
       },
       {
-        display: '讓我知道家裡用電的詳細狀況就好，我會自己找到省電的辦法',
+        display: '讓大家知道家裡用電的詳細狀況，我會自己找到省電的辦法',
         value: 'self_info',
       },
       {
-        display: '愛賭才會贏！一定要有抽獎我才會想配合啦！',
+        display: '愛賭才會贏！一定要有抽獎大家才會想配合啦！',
         value: 'lotte',
       },
       {
@@ -123,9 +142,12 @@ export default [
   {
     id: 'rush_hour',
     type: 'tutorial',
-    title: '是說，省電沒省在刀口上的話也是白搭吧？',
-    subtitle: '聰明的我一定要專門挑尖峰時段來省電的啦！',
-    description: '依我看，台灣的用電尖峰時段一定是...',
+    background: [
+      '聽說，在某個尖峰時段，全島用電量會飆升到最高！島上的電力系統因此吃緊！',
+      '身經百戰的你知道，那正是節電的黃金時段啊。',
+    ],
+    question: '但是，這個尖峰用電的時段是何時呢？',
+    description: '',
     option: [
       {
         display: '冬天半夜 11 點到 1 點',
@@ -144,9 +166,14 @@ export default [
   {
     id: 'green',
     type: 'quiz',
-    title: '鄉民說如果很不會省電的話...',
-    subtitle: '幫他們發展循環利用的能源也行。',
-    description: '我可以做的是：',
+    background: [
+      '你花了一段時間探勘，發現台灣島上有很多可循環再利用的「再生能源」，',
+      '不像傳統的發電方式會製造那麼多的汙染。',
+      '四十年能源戰爭的經驗告訴你，再生能源發展一直是重要戰役。',
+      '你很欣慰地看見，台灣正走向再生能源之路。',
+    ],
+    question: '「對於再生能源，我希望……」',
+    description: '',
     option: [
       {
         display: '那我來挑個綠能、儲能、節能全部都有的智慧社區來住好囉',
@@ -177,8 +204,12 @@ export default [
   {
     id: 'participative',
     type: 'quiz',
-    title: '甚至還有一些更前衛（？）的選項 :Q ...',
-    subtitle: '來看看這裡面有沒有我喜歡的！',
+    background: [
+      '日子一天一天過去，你漸漸熟悉島嶼上的生活。',
+      '也因為你之前身經百戰，政府騁你為能源政策顧問，',
+      '你會如何推動能源政策？',
+    ],
+    question: '「我會優先推動的政策是……」',
     description: '',
     option: [
       {

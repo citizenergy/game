@@ -1,4 +1,9 @@
 export default {
+  'no_plant': {
+    name: '無電廠',
+    name_en: 'No Plant',
+    category: 'no_plant',
+  },
   'pumped': {
     name: '抽蓄式',
     name_en: 'Pumped',
