@@ -1,12 +1,14 @@
 import React from 'react'
+
 import org from '../setting/org'
+import logo from '../image/logo.png'
 
 export default (
 <footer className='App-footer' >
   <div className='ui container'>
     <div className='App-menu ui text menu'>
       <a href='/' className='icon logo image item'>
-        <img src='./logo.png' alt='logo' />
+        <img src={logo} alt='logo' />
         {org.name}
       </a>
       <div className='right menu'>

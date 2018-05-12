@@ -77,12 +77,14 @@ class App extends Component {
       quiz_mode: 'normal',
       current: 0,
       answer: {},
+      history: {},
       result: new Set(countyList)
     }
 
     this.start = this.start.bind(this)
     this.setAnswer = this.setAnswer.bind(this)
     this.goNext = this.goNext.bind(this)
+    this.goPrev = this.goPrev.bind(this)
     this.resetGame = this.resetGame.bind(this)
   }
 
@@ -100,44 +102,86 @@ class App extends Component {
     }))
   }
 
+  goPrev(quizId) {
+    if (this.state.current === 0) {
+      this.resetGame()
+    } else {
+      this.resetAnswer(quizId)
+    }
+  }
+
   setAnswer(quizId, answerValue) {
     this.setState((prevState, props) => {
 
       prevState.answer[quizId] = answerValue
 
-      if (answerValue === 'none') {
-        return {
-          answer: prevState.answer,
-          current: prevState.current + 1
-        }
-      }
-
       if (quiz[this.state.current].type === 'tutorial') {
         return {
           answer: prevState.answer,
-          quiz_mode: 'tutorial'
+          quiz_mode: 'tutorial',
         }
       }
 
-      let newResult = new Set();
-      for (const elem of prevState.result) {
+      let deletedResult = new Set()
+      prevState.history[quizId] = deletedResult
+      if (answerValue === 'none') {
+        return {
+          answer: prevState.answer,
+          history: prevState.history,
+          current: prevState.current + 1,
+        }
+      }
+
+      let newResult = new Set()
+      for (let elem of prevState.result) {
         if (!candidate[quizId]) {
           console.log(`no ${quizId} in ${candidate} `)
+          deletedResult.add(elem)
         } else if (!candidate[quizId][answerValue]) {
           console.log(`no ${answerValue} in ${candidate[quizId]} `)
+          deletedResult.add(elem)
         } else if (candidate[quizId][answerValue].has(elem)) {
           newResult.add(elem);
+        } else {
+          deletedResult.add(elem)
         }
       }
       console.log(newResult)
+      prevState.history[quizId] = deletedResult
+
       return {
         answer: prevState.answer,
+        history: prevState.history,
         result: newResult,
-        current: prevState.current + 1
+        current: prevState.current + 1,
       }
     }, () => {
       if ( this.state.result.size < 2 || this.state.current === quiz.length ) {
         this.setState({view: 'finished'})
+      }
+    })
+  }
+
+  resetAnswer() {
+
+    this.setState((prevState, props) => {
+
+      const quizId = quiz[prevState.current - 1].id
+      const historySet = prevState.history[quizId]
+      if (historySet) {
+        for (let elem of historySet) {
+          prevState.result.add(elem);
+        }
+      }
+      delete prevState.answer[quizId]
+      delete prevState.history[quizId]
+
+      console.log(prevState.result)
+      return {
+        answer: prevState.answer,
+        history: prevState.history,
+        result: prevState.result,
+        current: prevState.current - 1,
       }
     })
   }
@@ -260,6 +304,7 @@ class App extends Component {
     }
 
     const Background = quizItem.background.map((p, pIndex) => <p className='description' key={`${p}-${pIndex}`} >{p}</p>)
+    const Question = quizItem.question.map((p, pIndex) => <span key={`${p}-${pIndex}`} >{p}<br /></span>)
 
     return (
       <section className='App-main' data-mode={this.state.view} >
@@ -269,10 +314,18 @@ class App extends Component {
           <hr className='ui hidden divider' />
           {Placeholder}
           <h2 className='ui header'>
-            {quizItem.question}
+            {Question}
           </h2>
           <hr className='ui hidden divider' />
           {Option}
+          <hr className='ui hidden divider' />
+          <hr className='ui divider' />
+          <p>
+            <a onClick={() => this.goPrev(quizItem.id)}>
+              <i className='icon left chevron' />
+              回上一題
+            </a>
+          </p>
           <hr className='ui hidden divider' />
         </div>
       </section>

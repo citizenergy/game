@@ -6,7 +6,7 @@ import app from '../setting/app'
 import Placeholder from './Placeholder'
 
 export default ({onStart}) => (
-<main className='App-main welcome'>
+<main className='App-main welcome' >
   <div className='ui container'>
     <hr className='ui hidden divider' />
     <h1 className="ui header">
@@ -24,7 +24,8 @@ export default ({onStart}) => (
     </p>
     <hr className='ui hidden divider' />
     <h2 className='ui header' >
-      「這個島嶼說大也不大，但有山有海，我定居在哪裡好呢？」
+      「這個島嶼說大也不大，但有山有海，<br />
+      我定居在哪裡好呢？」
     </h2>
     <hr className='ui hidden divider' />
     <p>

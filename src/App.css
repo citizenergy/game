@@ -22,7 +22,7 @@
 }
 
 .App-main.welcome {
-  background-image: url('/placeholder.png');
+  background-image: url('image/placeholder.png');
   background-size: cover;
 }
 
