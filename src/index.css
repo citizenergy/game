@@ -1,8 +1,21 @@
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans'), local('NotoSans'), url(font/NotoSansTC-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Noto Sans'), local('NotoSans'), url(font/NotoSansTC-Bold.otf) format('opentype');
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  font-size: 16px; 
-  font-family: Lato,'Helvetica Neue', Arial, Helvetica,'PingFang TC', 'Heiti TC', '微軟正黑體', sans-serif;
+  font-size: 16px;
 }
 
 body {
@@ -11,6 +24,9 @@ body {
   background: hsla(180, 50%, 90%, 1);
   height: 100%;
   min-height: vh;
+}
+html, body, h1, h2, h3, h4, h5, .ui.header {
+  font-family: 'PingFang TC', 'Heiti TC', '微軟正黑體', 'Noto Sans', Lato,'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 a {
