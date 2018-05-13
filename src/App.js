@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Link
 } from 'react-router-dom'
 
 import path from './setting/path'
@@ -192,6 +193,7 @@ class App extends Component {
       quiz_mode: 'normal',
       current: 0,
       answer: {},
+      history: {},
       result: new Set(countyList)
     })
   }
@@ -213,6 +215,14 @@ class App extends Component {
           </h2>
           <hr className='ui hidden divider' />
           {list}
+          <hr className='ui hidden divider' />
+          <hr className='ui divider' />
+          <p>
+            <Link onClick={() => this.resetGame()} to='/'>
+              <i className='icon redo' />
+              再玩一次
+            </Link>
+          </p>
           <hr className='ui hidden divider' />
         </div>
       </section>
@@ -244,13 +254,16 @@ class App extends Component {
           <div className='ui container'>
             <hr className='ui hidden divider' />
             <h1 className='ui header'>
-              空包題大標
+              登登登等～答對了！ / 叭叭叭！猜錯了！
             </h1>
             <h2 className='ui header'>
-              空包題小標
+              （一句話描述正確答案）
             </h2>
+            <hr className='ui hidden divider' />
+            {Placeholder}
+            <hr className='ui hidden divider' />
             <p>
-              空包題詳解
+              （此題的詳細說明）
             </p>
             <hr className='ui hidden divider' />
             <p>
