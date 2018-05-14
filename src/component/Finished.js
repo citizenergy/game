@@ -6,14 +6,17 @@ import Placeholder from './Placeholder'
 export default (
 <main className='App-main' >
   <div className='ui container'>
+    <header className='background'>
     <hr className='ui hidden divider' />
     <h1 className='ui header'>
       登登登等～
     </h1>
-    {Placeholder}
     <h2 className='ui header'>
       我們找到適合你的城市了！
     </h2>
+    <hr className='ui hidden divider' />
+    </header>
+    <hr className='ui hidden divider' />
     <p>
       小編嚴選、簡直是為您量身打造的居住地點，終於姍姍來遲了！
     </p>

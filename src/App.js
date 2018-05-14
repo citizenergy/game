@@ -223,6 +223,12 @@ class App extends Component {
               再玩一次
             </Link>
           </p>
+          <p>
+            <Link onClick={() => this.resetGame()} to='/portal'>
+              <i className='icon hand rock outline' />
+              不管！我已經決定要住哪了
+            </Link>
+          </p>
           <hr className='ui hidden divider' />
         </div>
       </section>
@@ -252,6 +258,7 @@ class App extends Component {
       return (
         <section className='App-main' data-mode={this.state.view} >
           <div className='ui container'>
+            <header className='background'>
             <hr className='ui hidden divider' />
             <h1 className='ui header'>
               登登登等～答對了！ / 叭叭叭！猜錯了！
@@ -260,7 +267,7 @@ class App extends Component {
               （一句話描述正確答案）
             </h2>
             <hr className='ui hidden divider' />
-            {Placeholder}
+            </header>
             <hr className='ui hidden divider' />
             <p>
               （此題的詳細說明）
@@ -322,10 +329,11 @@ class App extends Component {
     return (
       <section className='App-main' data-mode={this.state.view} >
         <div className='ui container'>
+          <header className='background'>
           <hr className='ui hidden divider' />
           {Background}
           <hr className='ui hidden divider' />
-          {Placeholder}
+          </header>
           <h2 className='ui header'>
             {Question}
           </h2>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { Dimmer } from 'semantic-ui-react'
 
 import region from '../setting/region.js'
@@ -46,6 +47,15 @@ class Portal extends Component {
           我想住在...
         </h2>
         <TaiwanMap onClick={this.setRegion} />
+        <hr className='ui hidden divider' />
+        <hr className='ui divider' />
+        <p>
+          <Link to='/'>
+            <i className='icon left chevron' />
+            真難選，還是幫我推薦一下好惹
+          </Link>
+        </p>
+        <hr className='ui hidden divider' />
         <hr className='ui hidden section divider' />
         <Dimmer active={this.state.dimmer} onClickOutside={() => this.closeDimmer()} className='Portal-dimmer' >
           <span onClick={() => this.closeDimmer()} className='ui basic inverted icon button' style={{position: 'absolute', right: '1rem', top: '1rem', margin: '0'}} >

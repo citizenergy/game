@@ -26,6 +26,12 @@
   background-size: cover;
 }
 
+.App-main .background {
+  background-image: url('image/placeholder.png');
+  background-size: cover;
+  min-height: 20rem;
+}
+
 .App-main[data-mode='quiz'] {
   background: hsla(60, 50%, 90%, 1);
 }
