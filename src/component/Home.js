@@ -30,7 +30,7 @@ export default ({onStart}) => (
     <hr className='ui hidden divider' />
     <p>
       <a onClick={() => onStart() } className='ui huge teal button'>
-        找出適合我的縣市
+        找出適合我的居住地
       </a>
     </p>
     <hr className='ui hidden divider' />

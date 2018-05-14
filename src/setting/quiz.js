@@ -19,42 +19,46 @@ export default [
         display: '樸實的鄉村',
         value: 'village',
       },
+      {
+        display: '隨便啦都可以',
+        value: 'none',
+      },
     ],
   },
   {
     id: 'plant',
     type: 'quiz',
     background: [
-      '人們的日常總離不開電力，為維持全島的舒適生活，島上蓋了各式各樣的發電廠。',
+      '台灣人的日常總離不開電力，為維持全台的舒適生活，島上蓋了各式各樣的發電廠，',
       '你必須選擇跟某個發電廠住在一起。',
     ],
     question: [
-      '「唔……住在哪種電廠旁邊呢？」',
+      '「唔……要住在哪種電廠旁邊呢？」',
     ],
     description: '',
     option: [
       {
-        display: '太陽光',
+        display: '太陽能板',
         value: 'solar',
       },
       {
-        display: '風力',
+        display: '風機',
         value: 'wind',
       },
       {
-        display: '水力',
+        display: '水庫',
         value: 'hydro',
       },
       {
-        display: '火力',
+        display: '燃煤電廠',
         value: 'thermal',
       },
       {
-        display: '核能',
+        display: '核電廠',
         value: 'nuclear',
       },
       {
-        display: '我就是不要跟電廠住在一起！',
+        display: '我不要住電廠旁邊！',
         value: 'no_plant',
       },
     ],
@@ -64,11 +68,11 @@ export default [
     type: 'tutorial',
     background: [
       '終於在島上安頓下來！你聽到「叮咚」的門鈴聲，一打開門，',
-      '一群熱情的鄰居大喊：「恭喜來到亞洲第一島！」',
+      '一群熱情的鄰居大喊：「恭喜來到亞洲第一島！」你臉上露出了黑人問號。',
     ],
     question: [
-      '聽不懂在供蝦密啊！',
-      '所謂的亞洲第一大概是這種第一吧？',
+      '「看他們一臉萌樣……',
+      '所謂亞洲第一，大概是指台灣這種第一吧？」',
     ],
     description: '',
     option: [
@@ -154,24 +158,24 @@ export default [
     id: 'rush_hour',
     type: 'tutorial',
     background: [
-      '聽說，在某個尖峰時段，全島用電量會飆升到最高！島上的電力系統因此吃緊！',
-      '身經百戰的你知道，那正是節電的黃金時段啊。',
+      '聽說，在某個尖峰時段，全島用電量會飆升到最高！島上的電力系統因此吃緊……',
+      '身經百戰的你心想：那正是節電的黃金時段啊！',
     ],
     question: [
-      '但是，這個尖峰用電的時段是何時呢？',
+      '但，何時是台灣的尖峰用電時段，你搞清楚了嗎？',
     ],
     description: '',
     option: [
       {
-        display: '冬天半夜 11 點到 1 點',
+        display: '是冬天半夜 11 點到 1 點',
         value: 'night',
       },
       {
-        display: '夏天下午 1 點到 3 點',
+        display: '是夏天下午 1 點到 3 點',
         value: 'noon',
       },
       {
-        display: '夏天晚上 9 點到 11 點',
+        display: '是夏天晚上 9 點到 11 點',
         value: 'evening',
       },
     ],
@@ -181,8 +185,8 @@ export default [
     type: 'quiz',
     background: [
       '你花了一段時間探勘，發現台灣島上有很多可循環再利用的「再生能源」，',
-      '不像傳統的發電方式會製造那麼多的汙染。',
-      '四十年能源戰爭的經驗告訴你，再生能源發展一直是重要戰役。',
+      '比傳統發電方式更乾淨，對環境更友善。',
+      '過去能源戰爭的經驗告訴你，再生能源發展一直是重要戰役。',
       '你很欣慰地看見，台灣正走向再生能源之路。',
     ],
     question: [
@@ -191,7 +195,7 @@ export default [
     description: '',
     option: [
       {
-        display: '那我來挑個綠能、儲能、節能全部都有的智慧社區來住好囉',
+        display: '那我來挑個再生能源、儲能、節能全部都有的智慧社區來住好囉',
         value: 'smart_complex',
       },
       {
