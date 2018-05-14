@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 import path from '../setting/path'
 import app from '../setting/app'
-import Placeholder from './Placeholder'
 
 export default ({onStart}) => (
 <main className='App-main welcome' >

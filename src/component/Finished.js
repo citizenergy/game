@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import Placeholder from './Placeholder'
-
 export default (
 <main className='App-main' >
   <div className='ui container'>

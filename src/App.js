@@ -10,7 +10,6 @@ import quiz from './setting/quiz'
 import county from './setting/county'
 import plant from './setting/plant'
 import energy from './setting/energy'
-import category from './setting/category'
 import ranking from './setting/ranking'
 import placeholder from './image/placeholder.png'
 
@@ -19,7 +18,6 @@ import Home from './component/Home.js'
 import Finished from './component/Finished.js'
 import Portal from './container/Portal.js'
 import Footer from './component/Footer.js'
-import Placeholder from './component/Placeholder'
 
 import './App.css'
 
@@ -206,9 +204,9 @@ class App extends Component {
 
       const features = county[resultItem].feature
       const result = Object.keys(features).map((featureItem, featureIndex) => (
-        <div className='card' >
+        <div key={`${featureItem}-${featureIndex}`} className='card' >
           <div className='circular image' >
-            <img src={placeholder} />
+            <img alt='badge' src={placeholder} />
           </div>
           <div className='center aligned content'>
             {`${ranking[featureItem]}`}<br />
@@ -217,7 +215,7 @@ class App extends Component {
         </div>
       ))
       return (
-        <div className='ui segment'>
+        <div key={`${resultItem}-${resultIndex}`} className='ui segment'>
           <a href={`/${resultItem}`} target='_blank' className='ui dividing teal header' style={{display: 'block'}} >
             {county[resultItem].name}
           </a>
