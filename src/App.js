@@ -11,6 +11,8 @@ import county from './setting/county'
 import plant from './setting/plant'
 import energy from './setting/energy'
 import category from './setting/category'
+import ranking from './setting/ranking'
+import placeholder from './image/placeholder.png'
 
 import Header from './component/Header.js'
 import Home from './component/Home.js'
@@ -201,8 +203,28 @@ class App extends Component {
   renderReport() {
 
     const list = Array.from(this.state.result).map((resultItem, resultIndex) => {
+
+      const features = county[resultItem].feature
+      const result = Object.keys(features).map((featureItem, featureIndex) => (
+        <div className='card' >
+          <div className='circular image' >
+            <img src={placeholder} />
+          </div>
+          <div className='center aligned content'>
+            {`${ranking[featureItem]}`}<br />
+            {`第 ${features[featureItem]} 名`}
+          </div>
+        </div>
+      ))
       return (
-        <p key={resultItem} >{resultItem}</p>
+        <div className='ui segment'>
+          <a href={`/${resultItem}`} target='_blank' className='ui dividing teal header' style={{display: 'block'}} >
+            {county[resultItem].name}
+          </a>
+          <div className='ui five centered cards' key={resultItem} >
+            {result}
+          </div>
+        </div>
       )
     })
 
@@ -210,9 +232,9 @@ class App extends Component {
       <section className='App-main' >
         <div className='ui container'>
           <hr className='ui hidden divider' />
-          <h2 className='ui header'>
+          <h1 className='ui header'>
             你適合住在...
-          </h2>
+          </h1>
           <hr className='ui hidden divider' />
           {list}
           <hr className='ui hidden divider' />
