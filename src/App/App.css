@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(0,0%,0%,0.05);
+}
+
+.App .Header,
+.App .Footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.App .Header {
+  background: #fff;
+  box-shadow: 0 1px 1px 0 hsla(0,0%,0%,0.1);
+}
+
+.App .Footer {
+  background: hsla(0,0%,100%,0.5);
+  border-top: 1px #fff solid;
+  box-shadow: 0 -1px 1px 0 hsla(0,0%,0%,0.1);
+}
+
+.App .Header .grid,
+.App .Footer .grid {
+  display: grid;
+  grid-column-gap: 1rem;
+  align-items: center;
+}
+
+.App .Header .grid {
+  grid-template-areas: 'logo title';
+  grid-template-columns: 3rem auto 3rem;
+  padding: 1rem 0;
+}
+
+.App .Header .grid .logo {
+  grid-area: logo;
+}
+
+.App .Header .grid .title {
+  grid-area: title;
+}
+
+.App .Footer .grid {
+  grid-template-areas: '. banner source';
+  grid-template-columns: 3rem auto 3rem;
+}
+
+.App .Footer .grid .banner {
+  grid-area: banner;
+  width: 15rem;
+  justify-self: center;
+}
+
+.App .Footer .grid .source {
+  grid-area: source;
+}
+
+.App .Main {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+

@@ -1,6 +1,6 @@
 {
   "short_name": "Citizenergy Game",
-  "name": "某某星球爆炸了 ∫OoO∫ - 能源轉型推動聯盟",
+  "name": "能源轉型推動聯盟",
   "icons": [
     {
       "src": "fav.png",
@@ -8,7 +8,7 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#333333",
   "background_color": "#efefef"
