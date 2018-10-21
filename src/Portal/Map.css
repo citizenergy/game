@@ -1,0 +1,18 @@
+.Map .group {
+  fill: hsla(180, 50%, 50%, 1);
+  stroke-width: 1px;
+  stroke: hsla(0, 0%, 100%, 1);
+  cursor: pointer;
+}
+
+.Map .group:hover,
+.Map .group:focus,
+.Map .group:active {
+  fill: hsla(50, 100%, 50%, 1);
+  stroke: hsla(50, 100%, 50%, 1);
+  cursor: pointer;
+}
+
+.Map .group .city,
+.Map .group .county {
+}

@@ -9,6 +9,7 @@ import {
 
 import {Header, Footer} from '../App'
 import {Welcome} from '../Welcome'
+import {Portal} from '../Portal'
 import './App.css'
 
 class App extends React.Component {
@@ -30,7 +31,7 @@ class App extends React.Component {
               <Route exact path='/quiz' render={() => <p>Quiz</p>} />
               <Route exact path='/quiz/complete' render={() => <p>Complete</p>} />
               <Route exact path='/report' render={() => <p>Report</p>} />
-              <Route exact path='/portal/:region?' render={() => <p>Portal - Region?</p>} />
+              <Route exact path='/portal/:region?' render={({match}) => <Portal match={match} />} />
               <Route render={() => <Redirect to='/' />} />
             </Switch>
           </div>

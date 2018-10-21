@@ -7,8 +7,8 @@ export default {
   dialog: '這個島嶼說大也不大，但有山有海，我定居在哪裡好呢？',
   action: {
     title: '找出適合我的居住地',
-    link: '/quiz',
-    icon: 'map marker alternate'
+    icon: 'map marker alternate',
+    link: '/quiz'
   },
   alternate_action: {
     title: '我已經決定好了',
