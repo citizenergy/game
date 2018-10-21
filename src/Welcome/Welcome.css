@@ -1,0 +1,29 @@
+.Welcome {
+  background: repeating-linear-gradient(-10deg, hsla(180, 100%, 80%, 0.2),  hsla(180, 80%, 100%, 1),  hsla(180, 100%, 80%, 0.1));
+}
+
+.Welcome .img-positioner {
+  margin-right: -2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.Welcome .img-positioner img {
+  width: 100%;
+}
+
+.Welcome .text-positioner>.header {
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+.Welcome .img-positioner {
+  margin: 0 auto;
+  width: 20rem;
+}
+
+.Welcome .text-positioner>.header {
+  margin-top: 0;
+}
+}

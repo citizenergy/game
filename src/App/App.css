@@ -59,8 +59,34 @@
   grid-area: source;
 }
 
-.App .Main {
+.App .Body {
   flex-grow: 1;
   flex-shrink: 1;
+  display: flex;
 }
 
+.App .Body .route {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.App .Body .route .Main {
+  flex-grow: 1;
+  padding: 2rem 0;
+}
+
+.App .Body .dialog-bubble {
+  color: hsla(180, 50%, 25%, 1);
+  background-color: hsla(180, 50%, 60%, 0.1);
+  box-shadow: 0 0 0 4px hsla(180, 50%, 60%, 0.1);
+  border: 4px hsla(180, 50%, 50%, 0.25) dotted;
+  border-radius: 5rem 2rem / 2rem 5rem;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.App a,
+.App a:link {
+  color: hsla(180, 50%, 55%, 1);
+}

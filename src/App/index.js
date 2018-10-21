@@ -1,9 +1,13 @@
+import App from './App'
 import Header from './Header'
 import Footer from './Footer'
-import App from './App'
+import OWNER from './OWNER'
+import SETTINGS from './SETTINGS'
 
 export {
+  App,
   Header,
   Footer,
-  App
+  OWNER,
+  SETTINGS
 }
