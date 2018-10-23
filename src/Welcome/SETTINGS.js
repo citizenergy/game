@@ -8,10 +8,11 @@ export default {
   action: {
     title: '找出適合我的居住地',
     icon: 'map marker alternate',
-    link: '/quiz'
+    url: '/quiz'
   },
   alternate_action: {
     title: '我已經決定好了',
-    link: '/portal'
+    icon: 'right chevron',
+    url: '/portal'
   }
 }

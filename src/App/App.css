@@ -71,11 +71,6 @@
   flex-direction: column;
 }
 
-.App .Body .route .Main {
-  flex-grow: 1;
-  padding: 2rem 0;
-}
-
 .App .Body .dialog-bubble {
   color: hsla(180, 50%, 25%, 1);
   background-color: hsla(180, 50%, 60%, 0.1);

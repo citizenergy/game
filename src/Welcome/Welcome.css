@@ -2,6 +2,11 @@
   background: repeating-linear-gradient(-10deg, hsla(180, 100%, 80%, 0.2),  hsla(180, 80%, 100%, 1),  hsla(180, 100%, 80%, 0.1));
 }
 
+.Welcome .main {
+  flex-grow: 1;
+  padding: 2rem 0;
+}
+
 .Welcome .img-positioner {
   margin-right: -2rem;
   height: 100%;

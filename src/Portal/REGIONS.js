@@ -1,6 +1,6 @@
 export default {
   north: {
-    name: '北台灣',
+    title: '北台灣',
     description: '繁華似錦的好地方！想住在哪個縣市呢？',
     county: [
       'keelung_city',
@@ -12,7 +12,7 @@ export default {
     ]
   },
   middle: {
-    name: '中台灣',
+    title: '中台灣',
     description: '活力充沛的好地方！想住在哪個縣市呢？',
     county: [
       'miaoli_county',
@@ -23,7 +23,7 @@ export default {
     ]
   },
   south: {
-    name: '南台灣',
+    title: '南台灣',
     description: '熱情奔放的好地方！想住在哪個縣市呢？',
     county: [
       'chiayi_county',
@@ -35,7 +35,7 @@ export default {
     ]
   },
   east: {
-    name: '東台灣與離島',
+    title: '東台灣與離島',
     description: '風情萬種的好地方！想住在哪個縣市呢？',
     county: [
       'yilan_county',

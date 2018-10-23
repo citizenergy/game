@@ -1,8 +1,8 @@
 export default {
   title: '我想住在...',
   alternate_action: {
-    title: '我已經決定好了',
+    title: '真難選，還是幫我推薦一下好惹',
     icon: 'left chevron',
-    link: '/portal'
+    url: '/'
   }
 }

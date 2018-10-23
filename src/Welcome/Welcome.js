@@ -10,7 +10,7 @@ import './Welcome.css'
 const Welcome = () => {
   return (
     <div className='Welcome route'>
-      <main className='Main'>
+      <main className='main'>
         <div className='ui container'>
           <div className='ui two column stackable grid'>
             <div className='column'>
@@ -26,15 +26,16 @@ const Welcome = () => {
                 <hr className='ui hidden divider' />
                 {array2Paragraphs(SETTINGS.paragraphs)}
                 {string2Dialog(SETTINGS.dialog)}
-                <Link to={SETTINGS.action.link} className='ui huge teal icon labeled button'>
+                <Link to={SETTINGS.action.url} className='ui huge teal icon labeled button'>
                   <i className={`${SETTINGS.action.icon} icon`} />
                   {SETTINGS.action.title}
                 </Link>
                 <div className='ui horizontal divider'>
                   或者
                 </div>
-                <Link to={SETTINGS.alternate_action.link} className='ui small basic button'>
+                <Link to={SETTINGS.alternate_action.url} className='ui small basic button'>
                   {SETTINGS.alternate_action.title}
+                  <i className={`${SETTINGS.alternate_action.icon} icon`} />
                 </Link>
               </div>
             </div>
