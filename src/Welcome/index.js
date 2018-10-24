@@ -1,5 +1,9 @@
 import Welcome from './Welcome'
+import SETTINGS from './SETTINGS'
+import img from './welcome.png'
 
 export {
-  Welcome
+  Welcome,
+  SETTINGS,
+  img
 }

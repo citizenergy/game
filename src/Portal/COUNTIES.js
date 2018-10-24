@@ -78,13 +78,13 @@ export default {
   taitung_county: {
     title: '臺東縣',
     title_en: 'Taitung County'
-  },
-  kinmen_county: {
-    title: '金門縣',
-    title_en: 'Kinmen County'
-  },
-  lienchiang_county: {
-    title: '連江縣',
-    title_en: 'Lienchiang County'
+  //},
+  //kinmen_county: {
+  //  title: '金門縣',
+  //  title_en: 'Kinmen County'
+  //},
+  //lienchiang_county: {
+  //  title: '連江縣',
+  //  title_en: 'Lienchiang County'
   }
 }

@@ -7,8 +7,11 @@
   padding: 2rem 0;
 }
 
+.Welcome .content-wrapper {
+  margin: 0 auto;
+}
+
 .Welcome .img-positioner {
-  margin-right: -2rem;
   height: 100%;
   display: flex;
   flex-direction: column-reverse;
@@ -18,17 +21,33 @@
   width: 100%;
 }
 
+.Welcome .text-positioner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Welcome .Title {
+  border-image: linear-gradient(90deg, hsla(180, 50%, 50%, 0), hsla(180, 50%, 50%, 0.75), hsla(180, 50%, 50%, 0.75), hsla(180, 50%, 50%, 0)) 100% 1; 
+}
+
+@media only screen and (min-width: 768px) {
+.Welcome .img-positioner {
+  margin-right: -2rem;
+}
 .Welcome .text-positioner>.header {
   margin-top: 1.5rem;
 }
-
-@media only screen and (max-width: 767px) {
-.Welcome .img-positioner {
-  margin: 0 auto;
-  width: 20rem;
 }
 
-.Welcome .text-positioner>.header {
-  margin-top: 0;
+@media only screen and (max-width: 767px) {
+.Welcome .content-wrapper {
+  max-width: 480px;
+}
+.Welcome .img-positioner {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 20rem;
 }
 }

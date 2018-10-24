@@ -1,0 +1,19 @@
+.Dialog {
+  border-radius: 5rem 2rem / 2rem 5rem;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.Dialog.teal {
+  color: hsla(180, 50%, 25%, 1);
+  background-color: hsla(180, 50%, 60%, 0.1);
+  box-shadow: 0 0 0 4px hsla(180, 50%, 60%, 0.1);
+  border: 4px hsla(180, 50%, 50%, 0.25) dotted;
+}
+
+.Dialog.pink {
+  color: hsla(330, 50%, 25%, 1);
+  background-color: hsla(330, 50%, 60%, 0.1);
+  box-shadow: 0 0 0 4px hsla(330, 50%, 60%, 0.1);
+  border: 4px hsla(330, 50%, 50%, 0.25) dotted;
+}

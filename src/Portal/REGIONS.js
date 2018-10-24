@@ -35,14 +35,14 @@ export default {
     ]
   },
   east: {
-    title: '東台灣與離島',
+    title: '東台灣',
     description: '風情萬種的好地方！想住在哪個縣市呢？',
     county: [
       'yilan_county',
       'hualien_county',
       'taitung_county',
-      'kinmen_county',
-      'lienchiang_county'
+      //'kinmen_county',
+      //'lienchiang_county'
     ]
   }
 }
