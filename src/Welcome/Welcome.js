@@ -5,7 +5,7 @@ import {Title, Dialog, Paragraphs, Footer} from '../App'
 import {SETTINGS, img} from '../Welcome'
 import './Welcome.css'
 
-const Welcome = () => {
+const Welcome = (props) => {
   return (
     <div className='Welcome route'>
       <main className='main'>
@@ -14,7 +14,7 @@ const Welcome = () => {
             <div className='ui two column stackable grid'>
               <div className='column'>
                 <div className='img-positioner'>
-                  <img src={img} />
+                  <div className='img-holder' style={{backgroundImage: `url(${img})`}} />
                 </div>
               </div>
               <div className='column'>
@@ -30,7 +30,7 @@ const Welcome = () => {
             </div>
             <hr className='ui hidden section divider' />
             <div className='action-wrapper'>
-              <Link to={SETTINGS.action.url} className='ui huge teal icon labeled button'>
+              <Link onClick={props.handleQuizReset} to={SETTINGS.action.url} className='ui huge teal icon labeled button'>
                 <i className={`${SETTINGS.action.icon} icon`} />
                 {SETTINGS.action.title}
               </Link>

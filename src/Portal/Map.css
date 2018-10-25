@@ -1,8 +1,13 @@
+.Map {
+  animation: 1s ease-out 0s 1 fadeIn;
+}
+
 .Map .group {
   fill: hsla(180, 50%, 50%, 1);
   stroke-width: 1px;
   stroke: hsla(0, 0%, 100%, 1);
   cursor: pointer;
+  transition: all 0.25s ease-out;
 }
 
 .Map .group:hover,

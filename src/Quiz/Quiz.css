@@ -3,8 +3,30 @@
 }
 
 .Quiz .main {
+  position: relative;
   flex-grow: 1;
+  display: flex;
+}
+
+.Quiz .main .floor,
+.Quiz .main .roof {
   padding: 2rem 0;
+  transition: all 0.5s ease-out;
+}
+
+.Quiz .main .floor {
+  flex-grow: 1;
+}
+
+.Quiz .main .floor.is-blurred {
+  filter: blur(1rem);
+}
+
+.Quiz .main .roof {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0,0%,100%,0.5);
 }
 
 .Quiz .content-wrapper {
@@ -12,22 +34,20 @@
   margin: 0 auto;
 }
 
-.Quiz .img-positioner {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.Quiz .img-positioner img {
-  width: 100%;
-}
-
+.Quiz .img-positioner,
 .Quiz .text-positioner {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.Quiz .img-holder {
+  height: 15rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  animation: 1s ease-out 0s 1 fadeIn;
 }
 
 @media only screen and (min-width: 768px) {
@@ -37,18 +57,10 @@
 .Quiz .text-positioner {
   padding: 1rem 0;
 }
-.Quiz .text-positioner .header {
-  margin-top: 1.5rem;
-}
 }
 
 @media only screen and (max-width: 767px) {
 .Quiz .content-wrapper {
   max-width: 480px;
-}
-.Quiz .img-positioner {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 20rem;
 }
 }

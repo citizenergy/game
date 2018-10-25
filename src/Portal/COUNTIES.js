@@ -65,7 +65,8 @@ export default {
   },
   penghu_county: {
     title: '澎湖縣',
-    title_en: 'Penghu County'
+    title_en: 'Penghu County',
+    status: 'disabled'
   },
   yilan_county: {
     title: '宜蘭縣',

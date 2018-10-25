@@ -9,8 +9,8 @@ export default {
     dialog: '我喜歡住在...',
     options: [
       {title: '熱鬧的城市', value: 'city'},
-      {title: '樸實的鄉村', value: 'village'},
-      {title: '隨便啦都可以', value: 'null'}
+      {title: '樸實的鄉村', value: 'country'},
+      {title: '隨便啦都可以', value: 'any'}
     ]
   },
   power_plant: {
@@ -27,7 +27,7 @@ export default {
       {title: '水庫', value: 'hydro'},
       {title: '燃煤電廠', value: 'thermal'},
       {title: '核電廠', value: 'nuclear'},
-      {title: '我不要住電廠旁邊！', value: 'null'}
+      {title: '我不要住電廠旁邊！', value: 'no_plant'}
     ]
   },
   taiwan_number_one: {
@@ -70,7 +70,7 @@ export default {
       {title: '請用電特別兇的人省電！我省一個月也比不上他們省一天', value: 'big_customer'},
       {title: '讓大家知道家裡用電的詳細狀況，我會自己找到省電的辦法', value: 'self_info'},
       {title: '愛賭才會贏！一定要有抽獎大家才會想配合啦！', value: 'lotte'},
-      {title: '好麻煩喔，先不理它好惹', value: 'none'}
+      {title: '好麻煩喔，先不理它好惹', value: 'any'}
     ]
   },
   peak_time: {
@@ -99,7 +99,7 @@ export default {
     options: [
       {title: '那我來挑個再生能源、儲能、節能全部都有的智慧社區來住好囉', value: 'smart_complex'},
       {title: '看我用腳投票給開發地熱、或者在公共空間屋頂裝太陽能板的縣市～', value: 'public_service'},
-      {title: '好複雜喔，先不理它好惹', value: 'none'}
+      {title: '好複雜喔，先不理它好惹', value: 'any'}
     ]
   },
   participatory_policy: {
@@ -113,7 +113,7 @@ export default {
     options: [
       {title: '縣市政府拿綠能多賺到的錢回饋給公益使用', value: 'money_back'},
       {title: '縣市政府跟鄉民一起制定能源政策', value: 'policy_making'},
-      {title: '好困難喔，先不理它好惹', value: 'none'}
+      {title: '好困難喔，先不理它好惹', value: 'any'}
     ]
   }
 }

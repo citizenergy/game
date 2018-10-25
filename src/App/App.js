@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-  HashRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-  Link
-} from 'react-router-dom'
+import {HashRouter as Router, Switch, Route, Redirect, Link} from 'react-router-dom'
 
 import {Header, Footer} from '../App'
 import {Welcome} from '../Welcome'
@@ -21,8 +15,8 @@ class App extends React.Component {
   handleQuizReset = () => {
     this.setState(this.initialState)
   }
-  handleQuizFinish = (newCounties) => {
-    this.setState({result: newCounties})
+  handleQuizFinish = ({result, action}) => {
+    this.setState({result}, () => {action()})
   }
   render () {
     console.log(this.state)
@@ -32,9 +26,8 @@ class App extends React.Component {
           <Header handleQuizReset={this.handleQuizReset} />
           <div className='Body'>
             <Switch>
-              <Route exact path='/' render={() => <Welcome />} />
-              <Route exact path='/quiz' render={() => <Quiz result={this.state.result} handleQuizFinish={this.handleQuizFinish} />} />
-              <Route exact path='/quiz/complete' render={() => <p>Complete</p>} />
+              <Route exact path='/' render={() => <Welcome handleQuizReset={this.handleQuizReset} />} />
+              <Route exact path='/quiz/:status?' render={({match}) => <Quiz match={match} result={this.state.result} handleQuizFinish={this.handleQuizFinish} handleQuizReset={this.handleQuizReset} />} />
               <Route exact path='/report' render={() => <p>Report</p>} />
               <Route exact path='/portal/:region?' render={({match}) => <Portal match={match} />} />
               <Route render={() => <Redirect to='/' />} />

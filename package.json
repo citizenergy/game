@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.0",
+    "papaparse": "^4.6.1",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -27,5 +28,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {}
 }

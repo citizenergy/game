@@ -16,7 +16,7 @@ const Region = ({region}) => {
       <hr className='ui hidden divider' />
       {REGIONS[region].county.map((countyID) => (
         <p key={countyID}>
-          <a href={`/${countyID}`} className='ui teal button' target='_blank'>
+          <a href={`/${countyID}`} className={`ui teal ${COUNTIES[countyID].status} button`} target='_blank'>
             {COUNTIES[countyID].title}
           </a>
         </p>

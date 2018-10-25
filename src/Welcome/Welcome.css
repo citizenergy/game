@@ -17,8 +17,11 @@
   flex-direction: column-reverse;
 }
 
-.Welcome .img-positioner img {
-  width: 100%;
+.Welcome .img-holder {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  animation: 1s ease-out 0s 1 fadeIn;
 }
 
 .Welcome .text-positioner {
@@ -36,6 +39,9 @@
 .Welcome .img-positioner {
   margin-right: -2rem;
 }
+.Welcome .img-holder {
+  height: 100%;
+}
 .Welcome .text-positioner>.header {
   margin-top: 1.5rem;
 }
@@ -46,8 +52,9 @@
   max-width: 480px;
 }
 .Welcome .img-positioner {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 20rem;
+  margin-right: 0;
+}
+.Welcome .img-holder {
+  height: 15rem;
 }
 }
