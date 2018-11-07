@@ -14,7 +14,7 @@ class Quiz extends React.Component {
     gameData: {},
     progress: 0,
     answers: {},
-    result: this.props.result,
+    result: null,
     isImgVisible: true,
     isTutVisible: false
   }
@@ -93,7 +93,7 @@ class Quiz extends React.Component {
     return filteredOptions
   }
   calculateResult = ({progress, answers}) => {
-    let newResult = this.props.result
+    let newResult = this.props.intitalResult
     for (let i = 0; i <= progress; i++) {
       const quizID = SETTINGS[i]
       if (QUIZS[quizID].type === 'tut' || answers[quizID] === 'any' || !this.state.gameData[quizID]) {
