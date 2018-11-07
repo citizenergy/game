@@ -2,19 +2,18 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 
+import img from './complete.png'
 import './Complete.css'
 
 export default () => {
   return (
     <div className='Complete ui container'>
     <div className='content-wrapper'>
-      <h1 className='ui icon header'>
-        <i className='icon pink map marker alternate' />
-        <div className='content'>
-          登登登等～
-          <div className='sub header'>
-            我們找到適合你的城市了！
-          </div>
+      <div className='img-holder' style={{backgroundImage: `url(${img})`}} />
+      <h1 className='ui pink header'>
+        登登登等～
+        <div className='sub header'>
+          我們找到適合你的城市了！
         </div>
       </h1>
       <hr className='ui hidden divider' />
