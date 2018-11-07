@@ -3,7 +3,7 @@ import {Link, withRouter} from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import {Title, Dialog, Paragraphs, Footer} from '../App'
-import {Progress, Options, QUIZS, SETTINGS} from '../Quiz'
+import {Progress, Options, Answer, QUIZS, SETTINGS} from '../Quiz'
 import {GameData} from './RAW'
 
 import './Quiz.css'
@@ -118,6 +118,7 @@ class Quiz extends React.Component {
   render () {
     console.log(this.state)
     const quizID = SETTINGS[this.state.progress]
+    const answer = this.state.answers[quizID]
     const quizData = QUIZS[quizID]
     const progress = (this.state.progress + 1) * 100 / SETTINGS.length
     const filteredOptions = this.calculateOptions({...this.state})
@@ -147,7 +148,7 @@ class Quiz extends React.Component {
               </div>
               <Dialog color='pink'>
                 <p>{quizData.dialog}</p>
-                <Options answer={this.state.answers[quizID]} handleOptionClick={this.handleOptionClick} options={filteredOptions} />
+                <Options answer={answer} handleOptionClick={this.handleOptionClick} options={filteredOptions} />
               </Dialog>
               <div onClick={this.handleBackClick} className='ui small basic button'>
                 <i className='left chevron icon' />
@@ -158,9 +159,7 @@ class Quiz extends React.Component {
         </div>
         {this.state.isTutVisible ? 
           <div className='roof'>
-            <span className='ui teal button' onClick={this.handleTutAckClick}>
-              朕知道了
-            </span>
+            <Answer quizData={quizData} answer={answer} handleTutAckClick={this.handleTutAckClick} />
           </div>
           : null}
         {this.props.match.params.status === 'complete' ?

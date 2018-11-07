@@ -1,0 +1,27 @@
+.Answer .header {
+  margin: 1rem 0;
+}
+
+.Answer .block.header {
+  background-color: #fff;
+  display: inline-block;
+  padding-left: 2em;
+  padding-right: 1em;
+  position: relative;
+}
+
+.Answer .header .corner.label {
+  margin: 0;
+}
+
+.Answer .header .corner.label .icon {
+  opacity: 1;
+}
+
+.Answer .teal.header {
+  border: 1px #00b5ad solid;
+}
+
+.Answer .pink.header {
+  border: 1px #e03997 solid;
+}
