@@ -50,6 +50,7 @@ export default ({quizData, answer, handleTutAckClick}) => {
       <hr className='ui hidden divider' />
       <span className='ui pink button' onClick={handleTutAckClick}>
         朕知道了
+        <i className='icon right hand spock' />
       </span>
     </div>
   )

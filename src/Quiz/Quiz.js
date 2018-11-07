@@ -3,7 +3,7 @@ import {Link, withRouter} from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import {Title, Dialog, Paragraphs, Footer} from '../App'
-import {Progress, Options, Answer, QUIZS, SETTINGS} from '../Quiz'
+import {Progress, Options, Answer, Complete, QUIZS, SETTINGS} from '../Quiz'
 import {GameData} from './RAW'
 
 import './Quiz.css'
@@ -164,7 +164,7 @@ class Quiz extends React.Component {
           : null}
         {this.props.match.params.status === 'complete' ?
           <div className='roof'>
-            COMPLETE
+            <Complete />
           </div>
           : null}
         </main>
