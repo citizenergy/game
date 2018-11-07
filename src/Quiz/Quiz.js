@@ -84,7 +84,11 @@ class Quiz extends React.Component {
   }
   calculateOptions = ({progress, answers}) => {
     const quizID = SETTINGS[progress]
-    const filteredOptions = QUIZS[quizID].options.filter((option) => {
+    const quizData = QUIZS[quizID]
+    if (quizData.type !== 'quiz') {
+      return quizData.options
+    }
+    const filteredOptions = quizData.options.filter((option) => {
       let mockAnswers = Object.assign({}, answers)
       mockAnswers[quizID] = option.value
       const mockResult = this.calculateResult({progress, answers: mockAnswers})
