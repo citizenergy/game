@@ -20,6 +20,7 @@ export default ({result}) => {
     <div className='Report route'>
       <main className='main'>
         <div className='ui container'>
+        <div className='content-wrapper'>
           <h1 className='ui header'>
             你適合住在
           </h1>
@@ -29,6 +30,7 @@ export default ({result}) => {
             <i className='left redo icon' />
             再玩一次
           </Link>
+        </div>
         </div>
       </main>
       <Footer />
