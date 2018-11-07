@@ -1,8 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-import REGIONS from './REGIONS'
-import COUNTIES from './COUNTIES'
+import {REGIONS, COUNTIES} from '../Portal'
 
 const Region = ({region}) => {
   return (

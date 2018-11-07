@@ -17,6 +17,10 @@ export default () => {
         </div>
       </h1>
       <hr className='ui hidden divider' />
+      <p>
+        小編嚴選、簡直是為您量身打造的居住地點，終於姍姍來遲了...
+      </p>
+      <hr className='ui hidden divider' />
       <Link to='/report' className='ui pink button'>
         看結果
         <i className='icon right chevron' />

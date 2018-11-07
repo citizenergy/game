@@ -5,6 +5,7 @@ import {Header, Footer} from '../App'
 import {Welcome} from '../Welcome'
 import {Portal, COUNTIES} from '../Portal'
 import {Quiz} from '../Quiz'
+import {Report} from '../Report'
 import './App.css'
 
 class App extends React.Component {
@@ -28,7 +29,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path='/' render={() => <Welcome handleQuizReset={this.handleQuizReset} />} />
               <Route exact path='/quiz/:status?' render={({match}) => <Quiz match={match} intitalResult={this.initialState.result} handleQuizFinish={this.handleQuizFinish} handleQuizReset={this.handleQuizReset} />} />
-              <Route exact path='/report' render={() => <p>Report</p>} />
+              <Route exact path='/report' render={() => <Report result={this.state.result} />} />
               <Route exact path='/portal/:region?' render={({match}) => <Portal match={match} />} />
               <Route render={() => <Redirect to='/' />} />
             </Switch>
