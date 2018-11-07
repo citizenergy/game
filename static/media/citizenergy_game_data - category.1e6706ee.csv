@@ -1,0 +1,7 @@
+id,title,title_en
+hydro,水力,Hydro
+wind,風力,Wind
+solar,太陽能,Solar
+thermal,火力,Thermal
+nuclear,核能,Nuclear
+no_plant,無電廠,No Plant
