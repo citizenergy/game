@@ -1,19 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "bbaa34b92334a798fc96dd712617aa98",
-    "url": "/game/static/media/citizenergy_game_data - plant.bbaa34b9.csv"
+    "revision": "1efd311bed1607d40aac18a5d9c3122d",
+    "url": "/game/static/media/citizenergy_game_data - energy.1efd311b.csv"
   },
   {
-    "revision": "f49b6fd47ccb9c0fd164",
-    "url": "/game/static/css/main.2fb1ab04.chunk.css"
+    "revision": "5b5ef88145eceab021ab",
+    "url": "/game/static/css/main.06298fea.chunk.css"
   },
   {
-    "revision": "fa8c47e04c8fea666470",
-    "url": "/game/static/js/1.fa8c47e0.chunk.js"
+    "revision": "89745ab8005549c074c3",
+    "url": "/game/static/js/1.89745ab8.chunk.js"
   },
   {
     "revision": "dffb2a4fcbf3ea7182df",
     "url": "/game/static/js/runtime~main.dffb2a4f.js"
+  },
+  {
+    "revision": "890a8c36a0a569b84a32719423e90c95",
+    "url": "/game/static/media/complete.890a8c36.png"
   },
   {
     "revision": "5dd64e3b72445790d7da7abb40843ddd",
@@ -40,12 +44,12 @@ self.__precacheManifest = [
     "url": "/game/static/media/citizenergy_game_data - category.1e6706ee.csv"
   },
   {
-    "revision": "1efd311bed1607d40aac18a5d9c3122d",
-    "url": "/game/static/media/citizenergy_game_data - energy.1efd311b.csv"
+    "revision": "5b5ef88145eceab021ab",
+    "url": "/game/static/js/main.5b5ef881.chunk.js"
   },
   {
-    "revision": "f49b6fd47ccb9c0fd164",
-    "url": "/game/static/js/main.f49b6fd4.chunk.js"
+    "revision": "bbaa34b92334a798fc96dd712617aa98",
+    "url": "/game/static/media/citizenergy_game_data - plant.bbaa34b9.csv"
   },
   {
     "revision": "6ce704cc3a32128d1c17b6a0fe0dcf89",
@@ -84,7 +88,7 @@ self.__precacheManifest = [
     "url": "/game/static/media/taiwan_number_one.c90532c2.png"
   },
   {
-    "revision": "17d935799508112a9e7c65e553ce95f0",
+    "revision": "c8330a47f418a78512716bca30f7f98a",
     "url": "/game/index.html"
   }
 ];
