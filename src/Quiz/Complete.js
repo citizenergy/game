@@ -7,6 +7,7 @@ import './Complete.css'
 export default () => {
   return (
     <div className='Complete ui container'>
+    <div className='content-wrapper'>
       <h1 className='ui icon header'>
         <i className='icon pink map marker alternate' />
         <div className='content'>
@@ -25,6 +26,7 @@ export default () => {
         看結果
         <i className='icon right chevron' />
       </Link>
+    </div>
     </div>
   )
 }

@@ -15,6 +15,7 @@ export default ({quizData, answer, handleTutAckClick}) => {
   const img = require(`./${quizID}-answer.png`)
   return (
     <div className='Answer ui container'>
+    <div className='content-wrapper'>
       {answer !== correctAnswer ? (
         <h2 className='ui pink block header'>
           <span className='ui pink left corner label'>
@@ -52,6 +53,7 @@ export default ({quizData, answer, handleTutAckClick}) => {
         朕知道了
         <i className='icon right hand spock' />
       </span>
+    </div>
     </div>
   )
 }

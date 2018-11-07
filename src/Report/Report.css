@@ -6,3 +6,8 @@
   flex-grow: 1;
   padding: 2rem 0;
 }
+
+.Report .content-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
