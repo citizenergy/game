@@ -169,11 +169,6 @@ class Quiz extends React.Component {
           : null}
         </main>
         <Footer />
-        {
-          Object.keys(IMG).map((imgID) => (
-            <img src={IMG[imgID]} key={imgID} style={{width: '0', height: '0'}} />
-          ))
-        }
       </div>
     )
   }

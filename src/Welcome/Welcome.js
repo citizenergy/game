@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 import {Title, Dialog, Paragraphs, Footer} from '../App'
 import {SETTINGS, img} from '../Welcome'
+import {IMG} from '../Quiz'
 import './Welcome.css'
 
 const Welcome = (props) => {
@@ -46,6 +47,11 @@ const Welcome = (props) => {
         </div>
       </main>
       <Footer />
+      {
+        Object.keys(IMG).map((imgID) => (
+          <img src={IMG[imgID]} key={imgID} style={{display: 'none'}} />
+        ))
+      }
     </div>
   )
 }
