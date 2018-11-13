@@ -11,3 +11,11 @@
   max-width: 720px;
   margin: 0 auto;
 }
+
+.Report svg {
+  fill: hsla(180, 50%, 50%, 1);
+}
+
+.Report .ui.cards>.card>.content>a.header:hover {
+  color: hsla(180, 50%, 50%, 1);
+}

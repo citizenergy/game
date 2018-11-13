@@ -4,6 +4,7 @@ import TaiwanRegion from './Region'
 import REGIONS from './REGIONS'
 import COUNTIES from './COUNTIES'
 import SETTINGS from './SETTINGS'
+import PATH from './PATH'
 
 export {
   Portal,
@@ -11,5 +12,6 @@ export {
   TaiwanRegion,
   REGIONS,
   COUNTIES,
-  SETTINGS
+  SETTINGS,
+  PATH
 }
