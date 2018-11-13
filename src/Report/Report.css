@@ -12,7 +12,17 @@
   margin: 0 auto;
 }
 
-.Report svg {
+.Report .image {
+  line-height: 0;
+}
+
+.Report svg path {
+  fill: hsla(180, 50%, 50%, 0.2);
+  stroke-width: 1px;
+  stroke: hsla(0, 0%, 100%, 1);
+}
+
+.Report svg .active path {
   fill: hsla(180, 50%, 50%, 1);
 }
 

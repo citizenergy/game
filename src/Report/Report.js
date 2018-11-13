@@ -17,7 +17,28 @@ export default ({result}) => {
       <div className='card' key={county}>
         <a className='image' href={`/${county}`} >
           <svg width='255.121px' viewBox={`0 ${COUNTIES[county].y_position} 255.121 180`}>
-            {PATH[county]}
+            {PATH.new_taipei_city}
+            {PATH.keelung_city}
+            {PATH.taipei_city}
+            {PATH.hsinchu_county}
+            {PATH.taoyuan_city}
+            {PATH.hsinchu_city}
+            {PATH.miaoli_county}
+            {PATH.nantou_county}
+            {PATH.taichung_city}
+            {PATH.changhua_county}
+            {PATH.yunlin_county}
+            {PATH.chiayi_county}
+            {PATH.chiayi_city}
+            {PATH.tainan_city}
+            {PATH.kaohsiung_city}
+            {PATH.pingtung_county}
+            {PATH.yilan_county}
+            {PATH.hualien_county}
+            {PATH.taitung_county}
+            <g className='active'>
+              {PATH[county]}
+            </g>
           </svg>
         </a>
         <div className='content'>
