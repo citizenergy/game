@@ -1,13 +1,13 @@
 {
   "main.css": "/game/static/css/main.0a8731df.chunk.css",
-  "main.js": "/game/static/js/main.0f10d4d1.chunk.js",
-  "main.js.map": "/game/static/js/main.0f10d4d1.chunk.js.map",
+  "main.js": "/game/static/js/main.77072e14.chunk.js",
+  "main.js.map": "/game/static/js/main.77072e14.chunk.js.map",
   "static/js/1.4f2c91a5.chunk.js": "/game/static/js/1.4f2c91a5.chunk.js",
   "static/js/1.4f2c91a5.chunk.js.map": "/game/static/js/1.4f2c91a5.chunk.js.map",
   "runtime~main.js": "/game/static/js/runtime~main.dffb2a4f.js",
   "runtime~main.js.map": "/game/static/js/runtime~main.dffb2a4f.js.map",
   "static/media/renewable_energy_policy.png": "/game/static/media/renewable_energy_policy.85a529fd.png",
-  "static/media/welcome.png": "/game/static/media/welcome.5dd64e3b.png",
+  "static/media/welcome.png": "/game/static/media/welcome.047c03a5.png",
   "static/media/citizenergy_game_data - category.csv": "/game/static/media/citizenergy_game_data - category.1e6706ee.csv",
   "static/media/citizenergy_game_data - energy.csv": "/game/static/media/citizenergy_game_data - energy.1efd311b.csv",
   "static/media/citizenergy_game_data - plant.csv": "/game/static/media/citizenergy_game_data - plant.bbaa34b9.csv",
@@ -26,6 +26,6 @@
   "static/media/banner.png": "/game/static/media/banner.6ce704cc.png",
   "static/css/main.0a8731df.chunk.css.map": "/game/static/css/main.0a8731df.chunk.css.map",
   "index.html": "/game/index.html",
-  "precache-manifest.ab5a89086b85f8577633d8b35240332f.js": "/game/precache-manifest.ab5a89086b85f8577633d8b35240332f.js",
+  "precache-manifest.d86a9465a3bc7198383aaa7e68d46d12.js": "/game/precache-manifest.d86a9465a3bc7198383aaa7e68d46d12.js",
   "service-worker.js": "/game/service-worker.js"
 }

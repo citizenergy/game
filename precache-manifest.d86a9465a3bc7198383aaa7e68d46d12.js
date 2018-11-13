@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/game/static/media/main_power_consumer.2fa5153a.png"
   },
   {
-    "revision": "0f10d4d19b34ff8a1315",
+    "revision": "77072e143a2dcfcfa4f0",
     "url": "/game/static/css/main.0a8731df.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/game/static/js/runtime~main.dffb2a4f.js"
   },
   {
-    "revision": "5dd64e3b72445790d7da7abb40843ddd",
-    "url": "/game/static/media/welcome.5dd64e3b.png"
+    "revision": "047c03a5658e9334ab583ee11594bef9",
+    "url": "/game/static/media/welcome.047c03a5.png"
   },
   {
     "revision": "e7944b1ee6193e3df1356c0fd9378b92",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/game/static/media/complete.d8ea347d.png"
   },
   {
-    "revision": "0f10d4d19b34ff8a1315",
-    "url": "/game/static/js/main.0f10d4d1.chunk.js"
+    "revision": "77072e143a2dcfcfa4f0",
+    "url": "/game/static/js/main.77072e14.chunk.js"
   },
   {
     "revision": "a4e10738f7fce049c31dc181dfd6dae9",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/game/static/media/banner.6ce704cc.png"
   },
   {
-    "revision": "7a8a104d9c3b90f8d3d977cbe7e7ca8e",
+    "revision": "fdeacd7d282db0df9b9f80f39c634a14",
     "url": "/game/index.html"
   }
 ];
