@@ -4,20 +4,16 @@ self.__precacheManifest = [
     "url": "/game/static/media/main_power_consumer.83eeeed1.png"
   },
   {
-    "revision": "86622b6a0dad0bff1a3b",
-    "url": "/game/static/css/main.bdc1986f.chunk.css"
+    "revision": "3e1651eca26742cc16ca",
+    "url": "/game/static/css/main.0a8731df.chunk.css"
   },
   {
-    "revision": "cbdf34b63892d177e158",
-    "url": "/game/static/js/1.cbdf34b6.chunk.js"
+    "revision": "4f2c91a59540379dec09",
+    "url": "/game/static/js/1.4f2c91a5.chunk.js"
   },
   {
     "revision": "dffb2a4fcbf3ea7182df",
     "url": "/game/static/js/runtime~main.dffb2a4f.js"
-  },
-  {
-    "revision": "91710b87676647d6910d7cc3108768c3",
-    "url": "/game/static/media/city_or_country.91710b87.png"
   },
   {
     "revision": "5dd64e3b72445790d7da7abb40843ddd",
@@ -40,16 +36,24 @@ self.__precacheManifest = [
     "url": "/game/static/media/citizenergy_game_data - plant.bbaa34b9.csv"
   },
   {
+    "revision": "91710b87676647d6910d7cc3108768c3",
+    "url": "/game/static/media/city_or_country.91710b87.png"
+  },
+  {
     "revision": "890a8c36a0a569b84a32719423e90c95",
     "url": "/game/static/media/complete.890a8c36.png"
   },
   {
-    "revision": "86622b6a0dad0bff1a3b",
-    "url": "/game/static/js/main.86622b6a.chunk.js"
+    "revision": "3e1651eca26742cc16ca",
+    "url": "/game/static/js/main.3e1651ec.chunk.js"
   },
   {
     "revision": "286f44dbe8812fb783c1f8bc6acfcb8a",
     "url": "/game/static/media/main_power_consumer_answer.286f44db.png"
+  },
+  {
+    "revision": "1e86375d2449e37871ce87465e0633ee",
+    "url": "/game/static/media/participatory_policy.1e86375d.png"
   },
   {
     "revision": "1a896bb70cf171436cc8a6f7da4fc2c4",
@@ -84,7 +88,7 @@ self.__precacheManifest = [
     "url": "/game/static/media/banner.6ce704cc.png"
   },
   {
-    "revision": "76447b479b575a939a5fe0ccb474f264",
+    "revision": "a683fcbcfe7d0ee5c21ee7d3a216e2aa",
     "url": "/game/index.html"
   }
 ];
