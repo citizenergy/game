@@ -3,9 +3,8 @@ import {Link, withRouter} from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import {Title, Dialog, Paragraphs, Footer} from '../App'
-import {Progress, Options, Answer, Complete, QUIZS, SETTINGS} from '../Quiz'
+import {Progress, Options, Answer, Complete, QUIZS, SETTINGS, IMG} from '../Quiz'
 import {GameData} from './RAW'
-import IMG from './IMG'
 
 import './Quiz.css'
 
@@ -170,6 +169,11 @@ class Quiz extends React.Component {
           : null}
         </main>
         <Footer />
+        {
+          Object.keys(IMG).map((imgID) => (
+            <img src={IMG[imgID]} key={imgID} style={{width: '0', height: '0'}} />
+          ))
+        }
       </div>
     )
   }
