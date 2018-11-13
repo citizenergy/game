@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import {ANSWERS} from '../Quiz'
+import IMG from './IMG'
 
 import './Answer.css'
 
@@ -12,7 +13,7 @@ export default ({quizData, answer, handleTutAckClick}) => {
   const answerTitle = quizData.options.filter((option) => option.value === answer)[0].title
   const correctAnswerTitle = quizData.options.filter((option) => option.value === correctAnswer)[0].title
   const title = answer === correctAnswer ? '你答對了！' : '不是這樣的噢！正確答案是：'
-  const img = require(`./${quizID}-answer.png`)
+  const img = IMG[`${quizID}_answer`]
   return (
     <div className='Answer ui container'>
     <div className='content-wrapper'>

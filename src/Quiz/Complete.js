@@ -2,10 +2,11 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import img from './complete.png'
+import IMG from './IMG'
 import './Complete.css'
 
 export default () => {
+  const img = IMG.complete
   return (
     <div className='Complete ui container'>
     <div className='content-wrapper'>

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import {Title, Dialog, Paragraphs, Footer} from '../App'
 import {Progress, Options, Answer, Complete, QUIZS, SETTINGS} from '../Quiz'
 import {GameData} from './RAW'
+import IMG from './IMG'
 
 import './Quiz.css'
 
@@ -122,7 +123,7 @@ class Quiz extends React.Component {
     const quizData = QUIZS[quizID]
     const progress = (this.state.progress + 1) * 100 / SETTINGS.length
     const filteredOptions = this.calculateOptions({...this.state})
-    const img = require(`./${quizID}.png`)
+    const img = IMG[quizID]
     return (
       <div className='Quiz route'>
         <GameData gameData={this.state.gameData} handleDataLoad={this.handleDataLoad} />
