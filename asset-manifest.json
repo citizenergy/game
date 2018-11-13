@@ -1,7 +1,7 @@
 {
-  "main.css": "/game/static/css/main.06298fea.chunk.css",
-  "main.js": "/game/static/js/main.5b5ef881.chunk.js",
-  "main.js.map": "/game/static/js/main.5b5ef881.chunk.js.map",
+  "main.css": "/game/static/css/main.dcacea20.chunk.css",
+  "main.js": "/game/static/js/main.d9632e54.chunk.js",
+  "main.js.map": "/game/static/js/main.d9632e54.chunk.js.map",
   "static/js/1.89745ab8.chunk.js": "/game/static/js/1.89745ab8.chunk.js",
   "static/js/1.89745ab8.chunk.js.map": "/game/static/js/1.89745ab8.chunk.js.map",
   "runtime~main.js": "/game/static/js/runtime~main.dffb2a4f.js",
@@ -24,8 +24,8 @@
   "static/media/power_saving_policy.png": "/game/static/media/power_saving_policy.cc5f4a40.png",
   "static/media/renewable_energy_policy.png": "/game/static/media/renewable_energy_policy.cd446f76.png",
   "static/media/taiwan_number_one.png": "/game/static/media/taiwan_number_one.c90532c2.png",
-  "static/css/main.06298fea.chunk.css.map": "/game/static/css/main.06298fea.chunk.css.map",
+  "static/css/main.dcacea20.chunk.css.map": "/game/static/css/main.dcacea20.chunk.css.map",
   "index.html": "/game/index.html",
-  "precache-manifest.e79aab38b1553a2d380faeeb8eb4be7f.js": "/game/precache-manifest.e79aab38b1553a2d380faeeb8eb4be7f.js",
+  "precache-manifest.76e532d88e9d80ec0e7206ad53bc3196.js": "/game/precache-manifest.76e532d88e9d80ec0e7206ad53bc3196.js",
   "service-worker.js": "/game/service-worker.js"
 }

@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/game/static/media/citizenergy_game_data - energy.1efd311b.csv"
   },
   {
-    "revision": "5b5ef88145eceab021ab",
-    "url": "/game/static/css/main.06298fea.chunk.css"
+    "revision": "d9632e5413886160d043",
+    "url": "/game/static/css/main.dcacea20.chunk.css"
   },
   {
     "revision": "89745ab8005549c074c3",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/game/static/media/citizenergy_game_data - category.1e6706ee.csv"
   },
   {
-    "revision": "5b5ef88145eceab021ab",
-    "url": "/game/static/js/main.5b5ef881.chunk.js"
+    "revision": "d9632e5413886160d043",
+    "url": "/game/static/js/main.d9632e54.chunk.js"
   },
   {
     "revision": "bbaa34b92334a798fc96dd712617aa98",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/game/static/media/taiwan_number_one.c90532c2.png"
   },
   {
-    "revision": "c8330a47f418a78512716bca30f7f98a",
+    "revision": "67fbe9f85dafdbd9a9a25e912277e21f",
     "url": "/game/index.html"
   }
 ];
