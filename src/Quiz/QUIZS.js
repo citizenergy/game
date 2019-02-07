@@ -67,9 +67,9 @@ export default {
     ],
     dialog: '台灣要節電嘛，我建議...',
     options: [
-      {title: '請用電特別兇的人省電！我省一個月也比不上他們省一天', value: 'big_customer'},
-      {title: '讓大家知道家裡用電的詳細狀況，我會自己找到省電的辦法', value: 'self_info'},
-      {title: '愛賭才會贏！一定要有抽獎大家才會想配合啦！', value: 'lotte'},
+      {title: '先看看這個縣市主要用電的產業是什麼，對症下藥最重要！', value: 'industry_analysis'},
+      {title: '希望可以有人到大家的社區和家中幫忙診斷如何節電！', value: 'home_diagnosis'},
+      {title: '只需要補助錢讓大家汰換耗能家電就好囉，這個最實際！', value: 'retiring_subsidy'},
       {title: '好麻煩喔，先不理它好惹', value: 'any'}
     ]
   },
@@ -98,7 +98,7 @@ export default {
     dialog: '對於再生能源，我希望...',
     options: [
       {title: '那我來挑個再生能源、儲能、節能全部都有的智慧社區來住好囉', value: 'smart_complex'},
-      {title: '看我用腳投票給開發地熱、或者在公共空間屋頂裝太陽能板的縣市～', value: 'public_service'},
+      {title: '看我用腳投票給開發地熱、或在公共空間、農舍等屋頂裝太陽能板的縣市～', value: 'public_service'},
       {title: '好複雜喔，先不理它好惹', value: 'any'}
     ]
   },

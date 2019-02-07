@@ -25,3 +25,7 @@
 .Answer .pink.header {
   border: 1px #e03997 solid;
 }
+
+.Answer .text-positioner p {
+  text-align: left;
+}

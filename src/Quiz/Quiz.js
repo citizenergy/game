@@ -43,6 +43,7 @@ class Quiz extends React.Component {
       if (prevState.result.size === 1
         || prevState.progress + 1 === SETTINGS.length
         || this.calculateOptions({progress: prevState.progress + 1, answers: prevState.answers}).length === 0
+        || this.calculateOptions({progress: prevState.progress + 1, answers: prevState.answers}).filter((option) => option.value !== 'any').length === 0
       ) {
         this.props.handleQuizFinish({result: prevState.result, action: () => {this.props.history.push('/quiz/complete')}})
       // otherwise go to next quiz
