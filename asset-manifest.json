@@ -1,7 +1,7 @@
 {
-  "main.css": "/game/static/css/main.f62db37e.chunk.css",
-  "main.js": "/game/static/js/main.3d1c6f51.chunk.js",
-  "main.js.map": "/game/static/js/main.3d1c6f51.chunk.js.map",
+  "main.css": "/game/static/css/main.7a486dd5.chunk.css",
+  "main.js": "/game/static/js/main.7acd7303.chunk.js",
+  "main.js.map": "/game/static/js/main.7acd7303.chunk.js.map",
   "static/js/1.f647e4af.chunk.js": "/game/static/js/1.f647e4af.chunk.js",
   "static/js/1.f647e4af.chunk.js.map": "/game/static/js/1.f647e4af.chunk.js.map",
   "runtime~main.js": "/game/static/js/runtime~main.dffb2a4f.js",
@@ -24,8 +24,8 @@
   "static/media/taiwan_number_one.png": "/game/static/media/taiwan_number_one.6d40a188.png",
   "static/media/taiwan_number_one_answer.png": "/game/static/media/taiwan_number_one_answer.4c96f528.png",
   "static/media/banner.png": "/game/static/media/banner.6ce704cc.png",
-  "static/css/main.f62db37e.chunk.css.map": "/game/static/css/main.f62db37e.chunk.css.map",
+  "static/css/main.7a486dd5.chunk.css.map": "/game/static/css/main.7a486dd5.chunk.css.map",
   "index.html": "/game/index.html",
-  "precache-manifest.e15d57577fa61f4003486ce5ebbe61de.js": "/game/precache-manifest.e15d57577fa61f4003486ce5ebbe61de.js",
+  "precache-manifest.bd9397c5553e542b742130950d08b324.js": "/game/precache-manifest.bd9397c5553e542b742130950d08b324.js",
   "service-worker.js": "/game/service-worker.js"
 }
