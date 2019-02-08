@@ -1,9 +1,9 @@
 {
-  "main.css": "/game/static/css/main.7a486dd5.chunk.css",
-  "main.js": "/game/static/js/main.7acd7303.chunk.js",
-  "main.js.map": "/game/static/js/main.7acd7303.chunk.js.map",
-  "static/js/1.f647e4af.chunk.js": "/game/static/js/1.f647e4af.chunk.js",
-  "static/js/1.f647e4af.chunk.js.map": "/game/static/js/1.f647e4af.chunk.js.map",
+  "main.css": "/game/static/css/main.0eca221e.chunk.css",
+  "main.js": "/game/static/js/main.d856580d.chunk.js",
+  "main.js.map": "/game/static/js/main.d856580d.chunk.js.map",
+  "static/js/1.40f56da1.chunk.js": "/game/static/js/1.40f56da1.chunk.js",
+  "static/js/1.40f56da1.chunk.js.map": "/game/static/js/1.40f56da1.chunk.js.map",
   "runtime~main.js": "/game/static/js/runtime~main.dffb2a4f.js",
   "runtime~main.js.map": "/game/static/js/runtime~main.dffb2a4f.js.map",
   "static/media/renewable_energy_policy.png": "/game/static/media/renewable_energy_policy.85a529fd.png",
@@ -24,8 +24,8 @@
   "static/media/taiwan_number_one.png": "/game/static/media/taiwan_number_one.6d40a188.png",
   "static/media/taiwan_number_one_answer.png": "/game/static/media/taiwan_number_one_answer.4c96f528.png",
   "static/media/banner.png": "/game/static/media/banner.6ce704cc.png",
-  "static/css/main.7a486dd5.chunk.css.map": "/game/static/css/main.7a486dd5.chunk.css.map",
+  "static/css/main.0eca221e.chunk.css.map": "/game/static/css/main.0eca221e.chunk.css.map",
   "index.html": "/game/index.html",
-  "precache-manifest.bd9397c5553e542b742130950d08b324.js": "/game/precache-manifest.bd9397c5553e542b742130950d08b324.js",
+  "precache-manifest.6834f2ee0ea5ae395e940cc6957184d8.js": "/game/precache-manifest.6834f2ee0ea5ae395e940cc6957184d8.js",
   "service-worker.js": "/game/service-worker.js"
 }
