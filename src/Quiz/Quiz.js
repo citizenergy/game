@@ -45,7 +45,7 @@ class Quiz extends React.Component {
         || this.calculateOptions({progress: prevState.progress + 1, answers: prevState.answers}).length === 0
         || this.calculateOptions({progress: prevState.progress + 1, answers: prevState.answers}).filter((option) => option.value !== 'any').length === 0
       ) {
-        this.props.handleQuizFinish({result: prevState.result, action: () => {this.props.history.push('/quiz/complete')}})
+        this.props.handleQuizFinish({result: prevState.result, answers: prevState.answers, action: () => {this.props.history.push('/quiz/complete')}})
       // otherwise go to next quiz
       } else {
         prevState.progress += 1
@@ -77,8 +77,18 @@ class Quiz extends React.Component {
   handleTutAckClick = () => {
     this.setState((prevState, props) => {
       prevState.isTutVisible = false
-      prevState.progress += 1
-      prevState.isImgVisible = false
+      if (prevState.result.size === 1
+        || prevState.progress + 1 === SETTINGS.length
+        || this.calculateOptions({progress: prevState.progress + 1, answers: prevState.answers}).length === 0
+        || this.calculateOptions({progress: prevState.progress + 1, answers: prevState.answers}).filter((option) => option.value !== 'any').length === 0
+      ) {
+        this.props.handleQuizFinish({result: prevState.result, answers: prevState.answers, action: () => {this.props.history.push('/quiz/complete')}})
+      // otherwise go to next quiz
+      } else {
+        prevState.progress += 1
+        prevState.isImgVisible = false
+        return prevState
+      }
     }, () => {
       this.setState({isImgVisible: true})
     })

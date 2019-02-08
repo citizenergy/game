@@ -7,6 +7,11 @@
   padding: 2rem 0;
 }
 
+.Report .ui.table {
+  width: auto;
+  margin: auto;
+}
+
 .Report .content-wrapper {
   max-width: 720px;
   margin: 0 auto;

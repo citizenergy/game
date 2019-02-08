@@ -1,15 +1,25 @@
 import React from 'react'
-import {Link, withRouter} from 'react-router-dom'
+import {Link, Redirect, withRouter} from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import {Footer} from '../App'
+import {SETTINGS, QUIZS} from '../Quiz'
 import {COUNTIES, PATH} from '../Portal'
 
 import './Report.css'
 
-export default ({result}) => {
+const Report = (props) => {
+  if (!props.answers) {
+    return <Redirect to='/' />
+  }
+
+  const handleReplayClick = () => {
+    props.handleQuizReset()
+    props.history.push('/')
+  }
+
   let countiesList = []
-  result.forEach((county) => {
+  props.result.forEach((county) => {
     if (COUNTIES[county].status === 'disabled') {
       return
     }
@@ -55,6 +65,31 @@ export default ({result}) => {
         <div className='ui container'>
           <div className='content-wrapper'>
             <h1 className='ui header'>
+              你的理想
+            </h1>
+            <table className='ui basic definition table'>
+              <tbody>
+                {SETTINGS.map((quizID) => {
+                  if (QUIZS[quizID].type === 'quiz' && props.answers[quizID]) {
+                    const answer = QUIZS[quizID].options.filter((option) => props.answers[quizID] === option.value)[0]
+                    return (
+                      <tr key={quizID}>
+                        <td>
+                          {QUIZS[quizID].title}
+                        </td>
+                        <td>
+                          {answer.title}
+                        </td>
+                      </tr>
+                    )
+                  } else {
+                    return null
+                  }
+                })}
+              </tbody>
+            </table>
+            <hr className='ui hidden divider' />
+            <h1 className='ui header'>
               你適合住在
             </h1>
             <hr className='ui hidden divider' />
@@ -62,10 +97,10 @@ export default ({result}) => {
               {countiesList}
             </div>
             <hr className='ui hidden divider' />
-            <Link to='/' className='ui small basic button'>
+            <div onClick={handleReplayClick} className='ui small basic button'>
               <i className='left redo icon' />
               再玩一次
-            </Link>
+            </div>
           </div>
         </div>
       </main>
@@ -73,3 +108,5 @@ export default ({result}) => {
     </div>
   )
 }
+
+export default withRouter(Report)
