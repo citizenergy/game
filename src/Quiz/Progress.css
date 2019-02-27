@@ -1,0 +1,11 @@
+.Progress .ui.progress {
+  border-radius: 0;
+  margin: 0;
+}
+
+.Progress .ui.progress .bar {
+  height: 4px;
+  border-radius: 0;
+  transition: width 0.25s ease-out;
+}
+

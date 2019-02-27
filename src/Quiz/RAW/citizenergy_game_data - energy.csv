@@ -1,0 +1,13 @@
+category_id,id,title,title_en
+hydro,pumped,抽蓄式,Pumped
+hydro,ror,慣常式,Run of River
+wind,offshore,離岸風力,Offshore Wind
+wind,onshore,陸地風力,Onshore Wind
+solar,solar,太陽光電,Solar
+thermal,coal,燃煤,Coal
+thermal,lng,燃氣,Liquefied Natural Gas
+thermal,oil,燃油,Oil
+thermal,diesel,輕油,Diesel
+thermal,co_gen,汽電共生,Co-Generation
+nuclear,fission,核分裂,Fission
+no_plant,no_plant,無電廠,No Plant
