@@ -31,7 +31,7 @@ export default {
       'tainan_city',
       'kaohsiung_city',
       'pingtung_county',
-      'penghu_county'
+      //'penghu_county'
     ]
   },
   east: {
